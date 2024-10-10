@@ -1,6 +1,6 @@
 # NeuroSim
 
-The NeuroSim framework was developed by [Prof. Shimeng Yu's group](https://shimeng.ece.gatech.edu/) (Georgia Institute of Technology). The model is made publicly available on a non-commercial basis. Copyright of the model is maintained by the developers, and the model is distributed under the terms of the [Creative Commons Attribution-NonCommercial 4.0 International Public License](http://creativecommons.org/licenses/by-nc/4.0/legalcode)
+The NeuroSim framework was developed by [Prof. Shimeng Yu's group](https://shimeng.ece.gatech.edu/) (Georgia Institute of Technology). The model is made publicly available on a non-commercial basis. Copyright of the model is maintained by the developers, and the model is distributed under the terms of the [Creative Commons Attribution-Non Commercial 4.0 International Public License](http://creativecommons.org/licenses/by-nc/4.0/legalcode)
 
 :star2: This repository includes all versions of NeuroSim, each tailored for different nerual network applications. The versions are organized into four categories: **2D Inference, 2D Training, 3D Inference, and MLP Inference**, with each version available on its respective branch. For a more comprehensive description, please refer to the README file and user manual within each branch. We encourage you to select the version most suited to your needs after you have looked through the key features of different versions below.
 

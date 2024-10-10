@@ -23,9 +23,9 @@ The NeuroSim framework was developed by [Prof. Shimeng Yu's group](https://shime
 + 3DInferenceV1.0 (based on 2DInferenceV1.3): (1) Support H3D and M3D evaluation
 
 4. MLP Inference: MLP + NeuroSim evaluating DNN inference performance on 2D near-memory computing architectures.
-+ MLPV3.0: (1) Add weight representation (-1,1) in addtion to the original (0,1) (2) Support more training optimization methods such as momentum method, Adagrad, RMSprop, Adam(3) Support parallel read-out for digital eNVMs (e.g. STT-MRAM) (4) Support hybrid precision synapses
-+ MLPV2.0: (1) Support more device technologies (2) Optimize weight update scheme
-+ MLPV1.0: (1) Support analog eNVM devices (RRAM or PCM)
++ MLPInferenceV3.0: (1) Add weight representation (-1,1) in addtion to the original (0,1) (2) Support more training optimization methods such as momentum method, Adagrad, RMSprop, Adam(3) Support parallel read-out for digital eNVMs (e.g. STT-MRAM) (4) Support hybrid precision synapses
++ MLPInferenceV2.0: (1) Support more device technologies (2) Optimize weight update scheme
++ MLPInferenceV1.0: (1) Support analog eNVM devices (RRAM or PCM)
 
 Note: For the installation steps, file lists, release date, and additional details on the usage of this tool, please refer to the manual in the version branch.
 
@@ -34,29 +34,31 @@ Note: For the installation steps, file lists, release date, and additional detai
 This research is supported by NSF CAREER award, NSF/SRC E2CDA program, the ASCENT center (SRC/DARPA JUMP 1.0) and the PRISM and CHIMES centers (SRC/DARPA JUMP 2.0).
 
 ## Developers
-Developers: [Junmo Lee](mailto:junmolee@gatech.edu) :two_men_holding_hands: [James Read](mailto:jread6@gatech.edu) :couple: [Anni Lu](mailto:alu75@gatech.edu) :two_women_holding_hands: [Xiaochen Peng](mailto:xpeng76@gatech.edu) :two_women_holding_hands: [Shanshi Huang](mailto:shuang406@gatech.edu).
+Developers: [Junmo Lee](mailto:junmolee@gatech.edu) :two_men_holding_hands: [James Read](mailto:jread6@gatech.edu) :couple: Anni Lu: two_women_holding_hands: Xiaochen Peng :two_women_holding_hands: Shanshi Huang
 
 ## Citations
 If you use the tool or adapt the tool in your work or publication, you are required to cite the reference mentioned in the corresponding version branch.
 
 ## Contact
-If you have logistic questions or comments on the model, please contact :man: [Prof. Shimeng Yu](mailto:shimeng.yu@ece.gatech.edu), and if you have technical questions or comments, please contact :man: [Junmo Lee](mailto:junmolee@gatech.edu) or :man: [James Read](mailto:jread6@gatech.edu) or :man: [Ming-Yen Lee](mlee838@gatech.edu)
+If you have logistic questions or comments on the model, please contact :man: [Prof. Shimeng Yu](mailto:shimeng.yu@ece.gatech.edu), and if you have technical questions or comments, please contact :man: [Junmo Lee](mailto:junmolee@gatech.edu) or :man: [James Read](mailto:jread6@gatech.edu) or :man: [Ming-Yen Lee](mailto:mlee838@gatech.edu)
 
-:star2: Update
-[2024.10.10] M3D version with the lastest hardware evaluation is avaiable. Check branch 3DInferenceV1.1/M3D for more details.
+## Recent Update
+:star2: [2024.10.10] M3D version with the lastest hardware evaluation is avaiable. Check branch 3DInferenceV1.1/M3D for more details.
 
 ## References related to this tool
-1. J. Lee, A. Lu, W. Li, S. Yu, ※NeuroSim V1. 4: Extending Technology Support for Digital Compute-in-Memory Toward 1nm Node, *§ IEEE Transactions on Circuits and Systems I: Regular Papers, 2024.
-2. A. Lu, X. Peng, W. Li, H. Jiang, S. Yu, ※NeuroSim simulator for compute-in-memory hardware accelerator: validation and benchmark, *§ Frontiers in Artificial Intelligence, vol. 4, 659060, 2021.
-3. X. Peng, S. Huang, Y. Luo, X. Sun and S. Yu, ※DNN+NeuroSim: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators with Versatile Device Technologies, *§ IEEE International Electron Devices Meeting (IEDM)*, 2019.
-4. X. Peng, R. Liu, S. Yu, ※Optimizing weight mapping and data flow for convolutional neural networks on RRAM based processing-in-memory architecture, *§ IEEE International Symposium on Circuits and Systems (ISCAS)*, 2019.
-5. P.-Y. Chen, S. Yu, ※Technological benchmark of analog synaptic devices for neuro-inspired architectures, *§ IEEE Design & Test*, 2019.
-6. P.-Y. Chen, X. Peng, S. Yu, ※NeuroSim: A circuit-level macro model for benchmarking neuro-inspired architectures in online learning, *§ IEEE Trans. CAD*, 2018.
-7. X. Sun, S. Yin, X. Peng, R. Liu, J.-S. Seo, S. Yu, ※XNOR-RRAM: A scalable and parallel resistive synaptic architecture for binary neural networks,*§ ACM/IEEE Design, Automation & Test in Europe Conference (DATE)*, 2018.
-8. P.-Y. Chen, X. Peng, S. Yu, ※NeuroSim+: An integrated device-to-algorithm framework for benchmarking synaptic devices and array architectures, *§ IEEE International Electron Devices Meeting (IEDM)*, 2017.
-9. P.-Y. Chen, S. Yu, ※Partition SRAM and RRAM based synaptic arrays for neuro-inspired computing,*§ IEEE International Symposium on Circuits and Systems (ISCAS)*, 2016.
-10. P.-Y. Chen, D. Kadetotad, Z. Xu, A. Mohanty, B. Lin, J. Ye, S. Vrudhula, J.-S. Seo, Y. Cao, S. Yu, ※Technology-design co-optimization of resistive cross-point array for accelerating learning algorithms on chip,*§ IEEE Design, Automation & Test in Europe (DATE)*, 2015.
-11. S. Wu, et al., ※Training and inference with integers in deep neural networks,*§ arXiv: 1802.04680*, 2018.
-12. github.com/boluoweifenda/WAGE
-13. github.com/stevenygd/WAGE.pytorch
-14. github.com/aaron-xichen/pytorch-playground
+1. J. Lee, A. Lu, W. Li, S. Yu, ※NeuroSim V1. 4: Extending Technology Support for Digital Compute-in-Memory Toward 1nm Node, *§ IEEE Transactions on Circuits and Systems I: Regular Papers*, 2024.
+2. A. Lu, X. Peng, W. Li, H. Jiang, S. Yu, ※NeuroSim simulator for compute-in-memory hardware accelerator: validation and benchmark, *§ Frontiers in Artificial Intelligence*, vol. 4, 659060, 2021.
+3. X. Peng, S. Huang, H. Jiang, A. Lu and S. Yu, ※DNN+NeuroSim V2.0: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators for On-Chip Training, *§ IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems*, 2021.
+4. X. Peng, S. Huang, Y. Luo, X. Sun and S. Yu, ※DNN+NeuroSim: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators with Versatile Device Technologies, *§ IEEE International Electron Devices Meeting (IEDM)*, 2019.
+5. Y. Luo, X. Peng, and S. Yu. ※MLP+ NeuroSimV3.0: Improving on-chip learning performance with device to algorithm optimizations, *§ Proceedings of the international conference on neuromorphic systems*, 2019.
+6. X. Peng, R. Liu, S. Yu, ※Optimizing weight mapping and data flow for convolutional neural networks on RRAM based processing-in-memory architecture, *§ IEEE International Symposium on Circuits and Systems (ISCAS)*, 2019.
+7. P.-Y. Chen, S. Yu, ※Technological benchmark of analog synaptic devices for neuro-inspired architectures, *§ IEEE Design & Test*, 2019.
+8. P.-Y. Chen, X. Peng, S. Yu, ※NeuroSim: A circuit-level macro model for benchmarking neuro-inspired architectures in online learning, *§ IEEE Trans. CAD*, 2018.
+9. X. Sun, S. Yin, X. Peng, R. Liu, J.-S. Seo, S. Yu, ※XNOR-RRAM: A scalable and parallel resistive synaptic architecture for binary neural networks,*§ ACM/IEEE Design, Automation & Test in Europe Conference (DATE)*, 2018.
+10. P.-Y. Chen, X. Peng, S. Yu, ※NeuroSim+: An integrated device-to-algorithm framework for benchmarking synaptic devices and array architectures, *§ IEEE International Electron Devices Meeting (IEDM)*, 2017.
+11. P.-Y. Chen, S. Yu, ※Partition SRAM and RRAM based synaptic arrays for neuro-inspired computing,*§ IEEE International Symposium on Circuits and Systems (ISCAS)*, 2016.
+12. P.-Y. Chen, D. Kadetotad, Z. Xu, A. Mohanty, B. Lin, J. Ye, S. Vrudhula, J.-S. Seo, Y. Cao, S. Yu, ※Technology-design co-optimization of resistive cross-point array for accelerating learning algorithms on chip,*§ IEEE Design, Automation & Test in Europe (DATE)*, 2015.
+13. S. Wu, et al., ※Training and inference with integers in deep neural networks,*§ arXiv: 1802.04680*, 2018.
+14. github.com/boluoweifenda/WAGE
+15. github.com/stevenygd/WAGE.pytorch
+16. github.com/aaron-xichen/pytorch-playground

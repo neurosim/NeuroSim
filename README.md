@@ -5,36 +5,30 @@ The NeuroSim framework was developed by [Prof. Shimeng Yu's group](https://shime
 :star2: This repository includes all versions of NeuroSim, each tailored for different nerual network applications. The versions are organized into four categories: **2D Inference, 2D Training, 3D Inference, and MLP Inference**, with each version available on its respective branch. For a more comprehensive description, please refer to the README file and user manual within each branch. We encourage you to select the version most suited to your needs after you have looked through the key features of different versions below.
 
 ## Versions and Key Features
-**The latest version is built upon modifications made in the previous version.**
+**Each version is built upon modifications made in the previous version.**
 
 **1. 2D Inference: DNN+NeuroSim evaluating DNN inference performance on 2D in-memory computing or near-memory computing architectures.**
-+ 2DInferenceV1.4:
-
-    (1) Support 130nm~1nm technology node 
-
-    (2) Add partial parallel mode 
-
-    (3) add XY bus as an alternative to H-tree interconnect
-+ 2DInferenceV1.3: (1) Validate with real silicon data (2) Add synchronous and asynchronous mode (3) Update technology file for FinFET (4) Add level shifter for eNVM
-+ 2DInferenceV1.2: (1) Calibrate temperature-related and layout features of FinFET technology (2) Add voltageSA-based multi-level SA and SAR ADC in addition to the original CurrentSA-based multi-level SA
-+ 2DInferenceV1.1: (1) Multi-core architecture in buffer for high parallelism (2) Implement low-swing interconnect (3) Calibrate FinFET technology library (4) Add device non-ideal factors (5) Pipeline execution
-+ 2DInferenceV1.0: (1) End-to-end benchmarking framework, (2) Support versatile memory technologies and various technology nodes (130nm~7nm), (3) Hierarchical simulation from chip level to array level
++ 2DInferenceV1.4: (1) Support 130nm~1nm technology node (2) Introduce partial parallel mode (3) Add XY bus as an alternative to H-tree interconnect
++ 2DInferenceV1.3: (1) Validate with real silicon data (2) Introduce synchronous and asynchronous mode (3) Update technology file for FinFET (4) Add level shifter for eNVM
++ 2DInferenceV1.2: (1) Calibrate temperature-related and layout features of FinFET technology (2) Add voltageSA-based multi-level SA and SAR ADC, in addition to the original CurrentSA-based multi-level SA
++ 2DInferenceV1.1: (1) Implement a multi-core architecture in buffer for high parallelism (2) Introduce low-swing interconnect (3) Calibrate FinFET technology library (4) Add device non-ideal factors (5) Enable pipeline execution
++ 2DInferenceV1.0: (1) Provice an end-to-end benchmarking framework, (2) Support various memory technologies and technology nodes (130nm~7nm), (3) Features hierarchical simulation from chip level to array level
 
 **2. 2D Training: DNN+NeuroSim evaluating DNN inference performance and on-chip training performance on 2D in-memory computing or near-memory computing architectures.**
-+ 2DTrainingV1.2 (based on 2DInferenceV1.4): (1) Latest hardware evaluation (technology node, interconnect, synchronous and asynchronous computing, ...) ####TODO####
++ 2DTrainingV1.2 (based on 2DInferenceV1.4): (1) Implement latest hardware evaluation (technology node, interconnect, synchronous and asynchronous computing, ...) ####TODO####
 + 2DTrainingV1.1 (based on 2DInferenceV1.2): (1) Include FeFET polarization during weight-update
 + 2DTrainingV1.0 (based on 2DInferenceV1.1): (1) Support on-chip training simulation and evaluation (2) Include more non-ideal properties of synaptic devices in programming compared to 2DInferenceV1.1
 
 **3. 3D Inference: DNN+NeuroSim evaluating DNN inference performance on heterogeneous 3D (H3D) and monolithic (M3D) in-memory computing or near-memory computing architectures.**
-+ 3DInferenceV1.1 (based on 2DInferenceV1.4): (1) Latest hardware evaluation (technology node, interconnect, synchronous and asynchronous computing, ...) ####TODO####
++ 3DInferenceV1.1 (based on 2DInferenceV1.4): (1) Implement latest hardware evaluation (technology node, interconnect, synchronous and asynchronous computing, ...) ####TODO####
 + 3DInferenceV1.0 (based on 2DInferenceV1.3): (1) Support H3D and M3D evaluation
 
 **4. MLP Inference: MLP+NeuroSim evaluating DNN inference performance on 2D near-memory computing architectures.**
-+ MLPInferenceV3.0: (1) Add weight representation (-1,1) in addtion to the original (0,1) (2) Support more training optimization methods such as momentum method, Adagrad, RMSprop, Adam(3) Support parallel read-out for digital eNVMs (e.g. STT-MRAM) (4) Support hybrid precision synapses
++ MLPInferenceV3.0: (1) Introduce weight representation (-1,1) in addtion to the original (0,1) (2) Support more training optimization methods such as momentum method, Adagrad, RMSprop, Adam(3) Support parallel read-out for digital eNVMs (e.g. STT-MRAM) (4) Add hybrid precision synapses
 + MLPInferenceV2.0: (1) Support more device technologies (2) Optimize weight update scheme
 + MLPInferenceV1.0: (1) Support analog eNVM devices (RRAM or PCM)
 
-Note: For the installation steps, file lists, release date, and additional details on the usage of this tool, please refer to the manual in the version branch.
+Note: Please refer to the manual in the respective version branch for installation instructions, file lists, release dates, and additional usage details.
 
 ## Acknowledgement
 This research is supported by NSF CAREER award, NSF/SRC E2CDA program, the ASCENT center (SRC/DARPA JUMP 1.0) and the PRISM and CHIMES centers (SRC/DARPA JUMP 2.0).

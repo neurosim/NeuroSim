@@ -2,13 +2,19 @@
 
 The NeuroSim framework was developed by [Prof. Shimeng Yu's group](https://shimeng.ece.gatech.edu/) (Georgia Institute of Technology). The model is made publicly available on a non-commercial basis. Copyright of the model is maintained by the developers, and the model is distributed under the terms of the [Creative Commons Attribution-NonCommercial 4.0 International Public License](http://creativecommons.org/licenses/by-nc/4.0/legalcode)
 
-:star2: This repository includes all the versions of NeuroSim towards different nerual network applications. All versions are available in their own branch. Versions are divided into four categories, **2D Inference, 2D Training, 3D Inference, MLP**. Please read the following brief summary of each version and refer to the most suitable version. Detailed description can be found in the each branch's readme file and user manual.
+:star2: This repository includes all versions of NeuroSim, each tailored for different nerual network applications. The versions are organized into four categories: **2D Inference, 2D Training, 3D Inference, and MLP Inference**, with each version available on its respective branch. For a more comprehensive description, please refer to the README file and user manual within each branch. We encourage you to select the version most suited to your needs after you have looked through the key features of different versions below.
 
 ## Versions and Key Features
-**The latest version is modified by the lastest previous version.**
+**The latest version is built upon modifications made in the previous version.**
 
 **1. 2D Inference: DNN+NeuroSim evaluating DNN inference performance on 2D in-memory computing or near-memory computing architectures.**
-+ 2DInferenceV1.4: (1) Support 130nm~1nm technology node  (2) Add partial parallel mode (3) add XY bus as an alternative to H-tree interconnect
++ 2DInferenceV1.4:
+
+    (1) Support 130nm~1nm technology node 
+
+    (2) Add partial parallel mode 
+
+    (3) add XY bus as an alternative to H-tree interconnect
 + 2DInferenceV1.3: (1) Validate with real silicon data (2) Add synchronous and asynchronous mode (3) Update technology file for FinFET (4) Add level shifter for eNVM
 + 2DInferenceV1.2: (1) Calibrate temperature-related and layout features of FinFET technology (2) Add voltageSA-based multi-level SA and SAR ADC in addition to the original CurrentSA-based multi-level SA
 + 2DInferenceV1.1: (1) Multi-core architecture in buffer for high parallelism (2) Implement low-swing interconnect (3) Calibrate FinFET technology library (4) Add device non-ideal factors (5) Pipeline execution
@@ -23,7 +29,7 @@ The NeuroSim framework was developed by [Prof. Shimeng Yu's group](https://shime
 + 3DInferenceV1.1 (based on 2DInferenceV1.4): (1) Latest hardware evaluation (technology node, interconnect, synchronous and asynchronous computing, ...) ####TODO####
 + 3DInferenceV1.0 (based on 2DInferenceV1.3): (1) Support H3D and M3D evaluation
 
-**4. MLP Inference: MLP + NeuroSim evaluating DNN inference performance on 2D near-memory computing architectures.**
+**4. MLP Inference: MLP+NeuroSim evaluating DNN inference performance on 2D near-memory computing architectures.**
 + MLPInferenceV3.0: (1) Add weight representation (-1,1) in addtion to the original (0,1) (2) Support more training optimization methods such as momentum method, Adagrad, RMSprop, Adam(3) Support parallel read-out for digital eNVMs (e.g. STT-MRAM) (4) Support hybrid precision synapses
 + MLPInferenceV2.0: (1) Support more device technologies (2) Optimize weight update scheme
 + MLPInferenceV1.0: (1) Support analog eNVM devices (RRAM or PCM)

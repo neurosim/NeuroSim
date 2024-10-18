@@ -13,7 +13,7 @@ The NeuroSim framework was developed by [Prof. Shimeng Yu's group](https://shime
 + 2DInferenceV1.2: (1) Calibrate temperature-related and layout features of FinFET technology (2) Add voltageSA-based multi-level SA and SAR ADC, in addition to the original CurrentSA-based multi-level SA
 + 2DInferenceV1.1: (1) Implement a multi-core architecture in the buffer for high parallelism (2) Introduce low-swing interconnect (3) Calibrate FinFET technology library (4) Add device non-ideal factors (5) Enable pipeline execution
 + 2DInferenceV1.0: (1) Provide an end-to-end benchmarking framework, (2) Support various memory technologies and technology nodes (130nm~7nm), (3) Features hierarchical simulation from chip level to array level
-+ 2DInferenceTPUV1.0: (1) 
++ 2DInferenceTPUV1.0: Wrap the DNN, TPU, and NeuroSim to evaluate the PPA of the TPU chip supporting the latest technology node in 2DInferenceV1.4.
 
 **2. 2D Training: DNN+NeuroSim evaluating DNN inference performance and on-chip training performance on 2D in-memory computing or near-memory computing architectures.**
 + 2DTrainingV1.2 (based on 2DInferenceV1.4): (1) Implement latest hardware evaluation (technology node, interconnect, synchronous and asynchronous computing, ...) ####TODO####

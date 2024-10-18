@@ -2,7 +2,7 @@
 
 The NeuroSim framework was developed by [Prof. Shimeng Yu's group](https://shimeng.ece.gatech.edu/) (Georgia Institute of Technology). The model is made publicly available on a non-commercial basis. Copyright of the model is maintained by the developers, and the model is distributed under the terms of the [Creative Commons Attribution-Non Commercial 4.0 International Public License](http://creativecommons.org/licenses/by-nc/4.0/legalcode)
 
-:star2: This repository includes all versions of NeuroSim, each tailored for different nerual network applications. The versions are organized into four categories: **2D Inference, 2D Training, 3D Inference, and MLP Inference**, with each version available on its respective branch. For a more comprehensive description, please refer to the README file and user manual within each branch. We encourage you to select the version most suited to your needs after you have looked through the key features of different versions below.
+:star2: This repository includes all versions of NeuroSim, each tailored for different neural network applications. The versions are organized into four categories: **2D Inference, 2D Training, 3D Inference, MLP Inference**, with each version available on its respective branch. For a more comprehensive description, please refer to the README file and user manual within each branch. We encourage you to select the version most suited to your needs after looking through the key features of the different versions below.
 
 ## Versions and Key Features
 **Each version is built upon modifications made in the previous version.**
@@ -11,8 +11,9 @@ The NeuroSim framework was developed by [Prof. Shimeng Yu's group](https://shime
 + 2DInferenceV1.4: (1) Support 130nm~1nm technology node (2) Introduce partial parallel mode (3) Add XY bus as an alternative to H-tree interconnect
 + 2DInferenceV1.3: (1) Validate with real silicon data (2) Introduce synchronous and asynchronous mode (3) Update technology file for FinFET (4) Add level shifter for eNVM
 + 2DInferenceV1.2: (1) Calibrate temperature-related and layout features of FinFET technology (2) Add voltageSA-based multi-level SA and SAR ADC, in addition to the original CurrentSA-based multi-level SA
-+ 2DInferenceV1.1: (1) Implement a multi-core architecture in buffer for high parallelism (2) Introduce low-swing interconnect (3) Calibrate FinFET technology library (4) Add device non-ideal factors (5) Enable pipeline execution
-+ 2DInferenceV1.0: (1) Provice an end-to-end benchmarking framework, (2) Support various memory technologies and technology nodes (130nm~7nm), (3) Features hierarchical simulation from chip level to array level
++ 2DInferenceV1.1: (1) Implement a multi-core architecture in the buffer for high parallelism (2) Introduce low-swing interconnect (3) Calibrate FinFET technology library (4) Add device non-ideal factors (5) Enable pipeline execution
++ 2DInferenceV1.0: (1) Provide an end-to-end benchmarking framework, (2) Support various memory technologies and technology nodes (130nm~7nm), (3) Features hierarchical simulation from chip level to array level
++ 2DInferenceTPUV1.0: (1) 
 
 **2. 2D Training: DNN+NeuroSim evaluating DNN inference performance and on-chip training performance on 2D in-memory computing or near-memory computing architectures.**
 + 2DTrainingV1.2 (based on 2DInferenceV1.4): (1) Implement latest hardware evaluation (technology node, interconnect, synchronous and asynchronous computing, ...) ####TODO####
@@ -20,11 +21,11 @@ The NeuroSim framework was developed by [Prof. Shimeng Yu's group](https://shime
 + 2DTrainingV1.0 (based on 2DInferenceV1.1): (1) Support on-chip training simulation and evaluation (2) Include more non-ideal properties of synaptic devices in programming compared to 2DInferenceV1.1
 
 **3. 3D Inference: DNN+NeuroSim evaluating DNN inference performance on heterogeneous 3D (H3D) and monolithic (M3D) in-memory computing or near-memory computing architectures.**
-+ 3DInferenceV1.1 (based on 2DInferenceV1.4): (1) Implement latest hardware evaluation (technology node, interconnect, synchronous and asynchronous computing, ...) ####TODO####
++ 3DInferenceV1.1 (based on 2DInferenceV1.4): (1) Implement the latest hardware evaluation (technology node, interconnect, synchronous and asynchronous computing, ...)
 + 3DInferenceV1.0 (based on 2DInferenceV1.3): (1) Support H3D and M3D evaluation
 
 **4. MLP Inference: MLP+NeuroSim evaluating DNN inference performance on 2D near-memory computing architectures.**
-+ MLPInferenceV3.0: (1) Introduce weight representation (-1,1) in addtion to the original (0,1) (2) Support more training optimization methods such as momentum method, Adagrad, RMSprop, Adam(3) Support parallel read-out for digital eNVMs (e.g. STT-MRAM) (4) Add hybrid precision synapses
++ MLPInferenceV3.0: (1) Introduce weight representation (-1,1) in addition to the original (0,1) (2) Support more training optimization methods such as momentum method, Adagrad, RMSprop, Adam(3) Support parallel read-out for digital eNVMs (e.g. STT-MRAM) (4) Add hybrid precision synapses
 + MLPInferenceV2.0: (1) Support more device technologies (2) Optimize weight update scheme
 + MLPInferenceV1.0: (1) Support analog eNVM devices (RRAM or PCM)
 
@@ -43,7 +44,7 @@ If you use the tool or adapt the tool in your work or publication, you are requi
 If you have logistic questions or comments on the model, please contact :man: [Prof. Shimeng Yu](mailto:shimeng.yu@ece.gatech.edu), and if you have technical questions or comments, please contact :man: [Junmo Lee](mailto:junmolee@gatech.edu) or :man: [James Read](mailto:jread6@gatech.edu) or :man: [Ming-Yen Lee](mailto:mlee838@gatech.edu)
 
 ## Recent Update
-:star2: [2024.10.10] M3D version with the lastest hardware evaluation is avaiable. Check branch 3DInferenceV1.1/M3D for more details.
+:star2: [2024.10.10] M3D version with the latest hardware evaluation is available. Check branch 3DInferenceV1.1/M3D for more details.
 
 ## References related to this tool
 1. J. Lee, A. Lu, W. Li, S. Yu, ※NeuroSim V1. 4: Extending Technology Support for Digital Compute-in-Memory Toward 1nm Node, *§ IEEE Transactions on Circuits and Systems I: Regular Papers*, 2024.

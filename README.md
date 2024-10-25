@@ -16,7 +16,7 @@ The NeuroSim framework was developed by [Prof. Shimeng Yu's group](https://shime
 + 2DInferenceTPUV1.0: Wrap the DNN, TPU, and NeuroSim to evaluate the PPA of the TPU chip supporting the latest technology node in 2DInferenceV1.4.
 
 **2. 2D Training: DNN+NeuroSim evaluating DNN inference performance and on-chip training performance on 2D in-memory computing or near-memory computing architectures.**
-+ 2DTrainingV1.2 (based on 2DInferenceV1.4): (1) Implement latest hardware evaluation (technology node, interconnect, synchronous and asynchronous computing, ...) ####TODO####
++ 2DTrainingV1.2 (based on 2DInferenceV1.4): (1) Implement the latest hardware components and technology
 + 2DTrainingV1.1 (based on 2DInferenceV1.2): (1) Include FeFET polarization during weight-update
 + 2DTrainingV1.0 (based on 2DInferenceV1.1): (1) Support on-chip training simulation and evaluation (2) Include more non-ideal properties of synaptic devices in programming compared to 2DInferenceV1.1
 
@@ -35,7 +35,7 @@ Note: Please refer to the manual in the respective version branch for installati
 This research is supported by NSF CAREER award, NSF/SRC E2CDA program, the ASCENT center (SRC/DARPA JUMP 1.0) and the PRISM and CHIMES centers (SRC/DARPA JUMP 2.0).
 
 ## Developers
-:two_men_holding_hands: [Junmo Lee](mailto:junmolee@gatech.edu) :two_men_holding_hands: [James Read](mailto:jread6@gatech.edu) :couple: Anni Lu :two_women_holding_hands: Xiaochen Peng :two_women_holding_hands: Shanshi Huang
+:two_men_holding_hands: [Junmo Lee](mailto:junmolee@gatech.edu) :two_men_holding_hands: [James Read](mailto:jread6@gatech.edu) :couple: Anni Lu :two_women_holding_hands: Xiaochen Peng :two_women_holding_hands: Shanshi Huang :two_men_holding_hands: [Ming-Yen Lee](mailto:mlee838@gatech.edu)
 
 ## Citations
 If you use the tool or adapt the tool in your work or publication, you are required to cite the reference mentioned in the corresponding version branch.
@@ -44,6 +44,8 @@ If you use the tool or adapt the tool in your work or publication, you are requi
 If you have logistic questions or comments on the model, please contact :man: [Prof. Shimeng Yu](mailto:shimeng.yu@ece.gatech.edu), and if you have technical questions or comments, please contact :man: [Junmo Lee](mailto:junmolee@gatech.edu) or :man: [James Read](mailto:jread6@gatech.edu) or :man: [Ming-Yen Lee](mailto:mlee838@gatech.edu)
 
 ## Recent Update
+:star2: [2024.10.25] Training version with the latest hardware evaluation is available. Check branch 2DTrainingV2.2 for more details.
+:star2: [2024.10.16] H3D version with the latest hardware evaluation is available. Check branch 3DInferenceV1.1/H3D for more details.
 :star2: [2024.10.10] M3D version with the latest hardware evaluation is available. Check branch 3DInferenceV1.1/M3D for more details.
 
 ## References related to this tool

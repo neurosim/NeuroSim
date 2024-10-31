@@ -677,13 +677,14 @@ void SubArray::CalculateArea() {  //calculate layout area for total design
 				sllevelshifter.CalculateArea(NULL, widthArray, NONE);				
 			}
 			
-			if (conventionalSequential) { 				
-				wlDecoder.CalculateArea(heightArray, NULL, NONE);
-				if (cell.accessType == CMOS_access) {
-					wlNewDecoderDriver.CalculateArea(heightArray, NULL, NONE);
-				} else {
-					wlDecoderDriver.CalculateArea(heightArray, NULL, NONE);
-				}				
+			if (conventionalSequential) { 			
+				//20241031 update move to the bottom	
+				// wlDecoder.CalculateArea(heightArray, NULL, NONE);
+				// if (cell.accessType == CMOS_access) {
+				// 	wlNewDecoderDriver.CalculateArea(heightArray, NULL, NONE);
+				// } else {
+				// 	wlDecoderDriver.CalculateArea(heightArray, NULL, NONE);
+				// }				
 				slSwitchMatrix.CalculateArea(NULL, widthArray, NONE);
 				if (numColMuxed > 1) {
 					mux.CalculateArea(NULL, widthArray, NONE);
@@ -709,8 +710,18 @@ void SubArray::CalculateArea() {  //calculate layout area for total design
 				if (numCellPerSynapse > 1) {
 					shiftAddWeight.CalculateArea(NULL, widthArray, NONE);
 				}
+				//20241031 update area floor plannning with less empty area
 				height = ((cell.writeVoltage > 1.5)==true? (sllevelshifter.height):0) + slSwitchMatrix.height + heightArray + ((numColMuxed > 1)==true? (mux.height):0) + \
 						multilevelSenseAmp.height + multilevelSAEncoder.height + adder.height + dff.height + shiftAddInput.height + shiftAddWeight.height + sarADC.height;
+				if (cell.accessType == CMOS_access) {
+					wlNewDecoderDriver.CalculateArea(height-muxDecoder.height, NULL, NONE);
+				} 
+				else {
+					wlDecoderDriver.CalculateArea(height-muxDecoder.height, NULL, NONE);
+				}
+				wllevelshifter.CalculateArea(height-muxDecoder.height, NULL, NONE);
+				bllevelshifter.CalculateArea(height-muxDecoder.height, NULL, NONE);
+				wlDecoder.CalculateArea(height-muxDecoder.height, NULL, NONE);
 				width = MAX( ((cell.writeVoltage > 1.5)==true? (wllevelshifter.width + bllevelshifter.width):0) + wlDecoder.width + wlNewDecoderDriver.width + wlDecoderDriver.width, ((numColMuxed > 1)==true? (muxDecoder.width):0) ) + widthArray;
 				area = height * width;
 				usedArea = areaArray + ((cell.writeVoltage > 1.5)==true? (wllevelshifter.area + bllevelshifter.area + sllevelshifter.area):0) + wlDecoder.area + wlDecoderDriver.area + wlNewDecoderDriver.area + slSwitchMatrix.area + 
@@ -720,12 +731,13 @@ void SubArray::CalculateArea() {  //calculate layout area for total design
 				areaADC = multilevelSenseAmp.area + multilevelSAEncoder.area + sarADC.area;
 				areaAccum = adder.area + dff.area + shiftAddInput.area + shiftAddWeight.area;
 				areaOther = ((cell.writeVoltage > 1.5)==true? (wllevelshifter.area + bllevelshifter.area + sllevelshifter.area):0) + wlDecoder.area + wlNewDecoderDriver.area + wlDecoderDriver.area + slSwitchMatrix.area + ((numColMuxed > 1)==true? (mux.area + muxDecoder.area):0);
-			} else if (conventionalParallel) { 
-				if (cell.accessType == CMOS_access) {
-					wlNewSwitchMatrix.CalculateArea(heightArray, NULL, NONE);
-				} else {
-					wlSwitchMatrix.CalculateArea(heightArray, NULL, NONE);
-				}
+			} else if (conventionalParallel) {
+				//20241031 update switch to the bottom  
+				// if (cell.accessType == CMOS_access) {
+				// 	wlNewSwitchMatrix.CalculateArea(heightArray, NULL, NONE);
+				// } else {
+				// 	wlSwitchMatrix.CalculateArea(heightArray, NULL, NONE);
+				// }
 				slSwitchMatrix.CalculateArea(NULL, widthArray, NONE);
 				if (numColMuxed > 1) {
 					mux.CalculateArea(NULL, widthArray, NONE);
@@ -762,12 +774,20 @@ void SubArray::CalculateArea() {  //calculate layout area for total design
 					hInv = 0;
 				}
 				double bufferarea= hInv * wInv * param->buffernumber * 2 * param->numRowSubArray;
-				
+				// 20241031 update the floor plan calculation is changed with less empty area.
 				height = ((cell.writeVoltage > 1.5)==true? (sllevelshifter.height):0) + slSwitchMatrix.height + heightArray + ((numColMuxed > 1)==true? (mux.height):0) + \
 						multilevelSenseAmp.height + multilevelSAEncoder.height + shiftAddWeight.height + shiftAddInput.height + ((numAdd > 1)==true? (adder.height+dff.height):0) + sarADC.height;
+				if (cell.accessType == CMOS_access) {
+					wlNewSwitchMatrix.CalculateArea(height-muxDecoder.height, NULL, NONE);
+				} 
+				else {
+					wlSwitchMatrix.CalculateArea(height-muxDecoder.height, NULL, NONE);
+				}
+				wllevelshifter.CalculateArea(height-muxDecoder.height, NULL, NONE);
+				bllevelshifter.CalculateArea(height-muxDecoder.height, NULL, NONE);
 				width = MAX( ((cell.writeVoltage > 1.5)==true? (wllevelshifter.width + bllevelshifter.width):0) + wlNewSwitchMatrix.width + wlSwitchMatrix.width, ((numColMuxed > 1)==true? (muxDecoder.width):0)) + widthArray + bufferarea/lengthCol; // added;
 				usedArea = areaArray + ((cell.writeVoltage > 1.5)==true? (wllevelshifter.area + bllevelshifter.area + sllevelshifter.area):0) + wlSwitchMatrix.area + wlNewSwitchMatrix.area + slSwitchMatrix.area + 
-							((numColMuxed > 1)==true? (mux.area + muxDecoder.area):0) + multilevelSenseAmp.area  + multilevelSAEncoder.area + shiftAddWeight.area + shiftAddInput.area + ((numAdd > 1)==true? (adder.area+dff.area):0) + sarADC.area + bufferarea;
+						((numColMuxed > 1)==true? (mux.area + muxDecoder.area):0) + multilevelSenseAmp.area  + multilevelSAEncoder.area + shiftAddWeight.area + shiftAddInput.area + ((numAdd > 1)==true? (adder.area+dff.area):0) + sarADC.area + bufferarea;
 				
 				areaADC = multilevelSenseAmp.area + multilevelSAEncoder.area + sarADC.area;
 				areaAccum = shiftAddWeight.area + shiftAddInput.area + ((numAdd > 1)==true? (adder.area+dff.area):0);
@@ -775,6 +795,8 @@ void SubArray::CalculateArea() {  //calculate layout area for total design
 				
 				area = height * width;				
 				emptyArea = area - usedArea;
+
+
 			} else if (BNNsequentialMode || XNORsequentialMode) {    
 				wlDecoder.CalculateArea(heightArray, NULL, NONE);
 				if (cell.accessType == CMOS_access) {
@@ -800,7 +822,17 @@ void SubArray::CalculateArea() {  //calculate layout area for total design
 				dff.CalculateArea(NULL, widthArray, NONE);
 				adder.CalculateArea(NULL, widthArray, NONE);
 				
+				//20241031 update subarray floor planning with less empty area
 				height = ((cell.writeVoltage > 1.5)==true? (sllevelshifter.height):0) + slSwitchMatrix.height + heightArray + ((numColMuxed > 1)==true? (mux.height):0) + multilevelSAEncoder.height + multilevelSenseAmp.height + adder.height + dff.height;
+				if (cell.accessType == CMOS_access) {
+					wlNewDecoderDriver.CalculateArea(height-muxDecoder.height, NULL, NONE);
+				} 
+				else {
+					wlDecoderDriver.CalculateArea(height-muxDecoder.height, NULL, NONE);
+				}
+				wllevelshifter.CalculateArea(height-muxDecoder.height, NULL, NONE);
+				bllevelshifter.CalculateArea(height-muxDecoder.height, NULL, NONE);
+				wlDecoder.CalculateArea(height-muxDecoder.height, NULL, NONE);
 				width = MAX( ((cell.writeVoltage > 1.5)==true? (wllevelshifter.width + bllevelshifter.width):0) + wlDecoder.width + wlNewDecoderDriver.width + wlDecoderDriver.width, ((numColMuxed > 1)==true? (muxDecoder.width):0)) + widthArray;
 				area = height * width;
 				// 1.4 update 230615s
@@ -833,6 +865,15 @@ void SubArray::CalculateArea() {  //calculate layout area for total design
 					dff.CalculateArea(NULL, widthArray, NONE);
 				}
 				height = ((cell.writeVoltage > 1.5)==true? (sllevelshifter.height):0) + slSwitchMatrix.height + heightArray + mux.height + multilevelSenseAmp.height + multilevelSAEncoder.height + sarADC.height + ((numAdd > 1)==true? (adder.height+dff.height):0);
+				// 20241031 update area floor planning with less empty
+				if (cell.accessType == CMOS_access) {
+					wlNewSwitchMatrix.CalculateArea(height-muxDecoder.height, NULL, NONE);
+				} 
+				else {
+					wlSwitchMatrix.CalculateArea(height-muxDecoder.height, NULL, NONE);
+				}
+				wllevelshifter.CalculateArea(height-muxDecoder.height, NULL, NONE);
+				bllevelshifter.CalculateArea(height-muxDecoder.height, NULL, NONE);
 				width = MAX( ((cell.writeVoltage > 1.5)==true? (wllevelshifter.width + bllevelshifter.width):0) + wlNewSwitchMatrix.width + wlSwitchMatrix.width, muxDecoder.width) + widthArray;
 				area = height * width;
 				usedArea = areaArray + ((cell.writeVoltage > 1.5)==true? (wllevelshifter.area + bllevelshifter.area + sllevelshifter.area):0) + wlSwitchMatrix.area + wlNewSwitchMatrix.area + slSwitchMatrix.area + 
@@ -1762,7 +1803,8 @@ void SubArray::CalculatePower(const vector<double> &columnResistance) {
 				// Read
 				readDynamicEnergyArray = 0;
 				readDynamicEnergyArray += capBL * cell.readVoltage * cell.readVoltage * numReadCells; // Selected BLs activityColWrite
-				readDynamicEnergyArray += capRow2 * tech.vdd * tech.vdd; // Selected WL
+				//20241031 update change the vdd to access voltage
+				readDynamicEnergyArray += capRow2 * cell.accessVoltage * cell.accessVoltage; // Selected WL
 				readDynamicEnergyArray *= numRow * activityRowRead * numColMuxed;
 
 				readDynamicEnergy = 0;
@@ -1850,9 +1892,10 @@ void SubArray::CalculatePower(const vector<double> &columnResistance) {
 				readDynamicEnergyArray = 0;
 				// Anni update:  * numAdd
 				// readDynamicEnergyArray += capBL * cell.readVoltage * cell.readVoltage * numReadCells * numAdd; // Selected BLs activityColWrite -> no need already considered in multilevelsenseamp
-				readDynamicEnergyArray += capRow2 * tech.vdd * tech.vdd * numRow * activityRowRead; // Selected WL
+				//20241031 update change the vdd to access voltage
+				readDynamicEnergyArray += capRow2 * cell.accessVoltage * cell.accessVoltage * numRow * activityRowRead; // Selected WL
 				// 1.4 update: buffer insertion
-				readDynamicEnergyArray += (drivecapin + drivecapout) * tech.vdd * tech.vdd * param->buffernumber * 2 * numRow * activityRowRead;
+				readDynamicEnergyArray += (drivecapin + drivecapout) * cell.accessVoltage * cell.accessVoltage * param->buffernumber * 2 * numRow * activityRowRead;
 				readDynamicEnergyArray *= numColMuxed;
 				
 				readDynamicEnergy = 0;
@@ -1869,6 +1912,8 @@ void SubArray::CalculatePower(const vector<double> &columnResistance) {
 				readDynamicEnergy += sarADC.readDynamicEnergy;	
 				
 				readDynamicEnergyADC = readDynamicEnergyArray + multilevelSenseAmp.readDynamicEnergy + multilevelSAEncoder.readDynamicEnergy + sarADC.readDynamicEnergy;
+
+
 				// Anni update: accum, other
 				readDynamicEnergyAccum = shiftAddWeight.readDynamicEnergy + shiftAddInput.readDynamicEnergy + adder.readDynamicEnergy + dff.readDynamicEnergy;				
 				readDynamicEnergyOther = wlNewSwitchMatrix.readDynamicEnergy + wlSwitchMatrix.readDynamicEnergy + ((numColMuxed > 1)==true? (mux.readDynamicEnergy + muxDecoder.readDynamicEnergy):0);
@@ -1935,7 +1980,8 @@ void SubArray::CalculatePower(const vector<double> &columnResistance) {
 				// Read
 				readDynamicEnergyArray = 0;
 				readDynamicEnergyArray += capBL * cell.readVoltage * cell.readVoltage * numReadCells; // Selected BLs activityColWrite
-				readDynamicEnergyArray += capRow2 * tech.vdd * tech.vdd; // Selected WL
+				//20241031 update change the vdd to access voltage
+				readDynamicEnergyArray += capRow2 * cell.accessVoltage * cell.accessVoltage; // Selected WL
 				readDynamicEnergyArray *= numRow * activityRowRead * numColMuxed;
 
 				readDynamicEnergy = 0;
@@ -2008,7 +2054,8 @@ void SubArray::CalculatePower(const vector<double> &columnResistance) {
 
 				
 				// readDynamicEnergyArray += capBL * cell.readVoltage * cell.readVoltage * numReadCells * numAdd; // Selected BLs activityColWrite -> Already considered in multilevelsenseamp.cpp
-				readDynamicEnergyArray += capRow2 * tech.vdd * tech.vdd * numRow * activityRowRead; // Selected WL
+				//20241031 update change the vdd to access voltage
+				readDynamicEnergyArray += capRow2 * cell.accessVoltage * cell.accessVoltage * numRow * activityRowRead; // Selected WL
 				readDynamicEnergyArray *= numColMuxed;
 				// 1.4 update: ADC update
 				// param->reference_energy_peri = capRow2/param->numColSubArray * tech.vdd * tech.vdd * numRow;

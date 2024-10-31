@@ -45,7 +45,9 @@ If you have logistic questions or comments on the model, please contact :man: [P
 
 ## Recent Update
 :star2: [2024.10.25] Training version with the latest hardware evaluation is available. Check branch 2DTrainingV2.2 for more details.
+
 :star2: [2024.10.16] H3D version with the latest hardware evaluation is available. Check branch 3DInferenceV1.1/H3D for more details.
+
 :star2: [2024.10.10] M3D version with the latest hardware evaluation is available. Check branch 3DInferenceV1.1/M3D for more details.
 
 ## References related to this tool

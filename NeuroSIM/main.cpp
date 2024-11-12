@@ -58,9 +58,9 @@ using namespace std;
 
 int main(int argc, char * argv[]) {   
 	setting(argv);
-	int numSubArrayRow = 8; //4;	// 256KB; each subarray 256*512, 4*4 subarrays
+	int numSubArrayRow = 4; //4;	// 256KB; each subarray 256*512, 4*4 subarrays
 	int numSubArrayCol = 4;
-	param->numRowSubArray = 128; //256;
+	param->numRowSubArray = 256; //256;
 	param->numColSubArray = 512;
 	SubArray *subArrayInPE;
 	subArrayInPE = new SubArray(inputParameter, tech, cell);

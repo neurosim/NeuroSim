@@ -74,13 +74,12 @@ If you have logistic questions or comments on the model, please contact :man: [P
 
 
 ## File lists
-1. Manual: `doc/user_manual_for_tpu_simulator.pdf`, `doc/readme.txt`
+1. Manual: `documents/User Manual of NeuroSim Digital Systolic Array Simulator.pdf`, `documents/readme.txt`
 2. DNN_TPU wrapped by Pytorch: `main.py`, `input.py`, `evaluate.py`, `hardware.py`, `parameters.py`, `utils.py`
-3. NeuroSim under Pytorch Inference: 'Inference_pytorch/NeuroSIM'
-
+3. NeuroSim under Pytorch Inference: '/NeuroSIM'
+4. TPU memory access count tables (from Timeloop): '/traces'
 
 For additional details on the usage of this tool, please refer to the manual.
-
 
 ## References related to this tool 
 1. A. Lu, J. Lee, T. H. Kim, M. Karim, R. S. Park, H. Simka, S. Yu, ※High-speed emerging memories for AI hardware accelerators. *§Nature Reviews Electrical Engineering*, 1(1), 24-34, 2024.

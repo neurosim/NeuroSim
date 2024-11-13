@@ -53,7 +53,7 @@ cd ..
 
 python main.py --tputype edge --model VGG8 
 python main.py --tputype edge --model ResNet18 
-python main.py --tputype cloud --model ResNet18 
+python main.py --tputype cloud --model VGG8 
 
 ```
 

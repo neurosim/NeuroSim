@@ -1,69 +1,144 @@
-# NeuroSim
+# DNN+DCIM+NeuroSim V1.0
 
-The NeuroSim framework was developed by [Prof. Shimeng Yu's group](https://shimeng.ece.gatech.edu/) (Georgia Institute of Technology). The model is made publicly available on a non-commercial basis. Copyright of the model is maintained by the developers, and the model is distributed under the terms of the [Creative Commons Attribution-Non Commercial 4.0 International Public License](http://creativecommons.org/licenses/by-nc/4.0/legalcode)
+The DNN+NeuroSim framework was developed by [Prof. Shimeng Yu's group](https://shimeng.ece.gatech.edu/) (Georgia Institute of Technology). The model is made publicly available on a non-commercial basis. Copyright of the model is maintained by the developers, and the model is distributed under the terms of the [Creative Commons Attribution-NonCommercial 4.0 International Public License](http://creativecommons.org/licenses/by-nc/4.0/legalcode)
 
-:star2: This repository includes all versions of NeuroSim, each tailored for different neural network applications. The versions are organized into four categories: **2D Inference, 2D Training, 3D Inference, MLP Inference**, with each version available on its respective branch. For a more comprehensive description, please refer to the README file and user manual within each branch. We encourage you to select the version most suited to your needs after looking through the key features of the different versions below.
+:star2: This is the released digital CIM (DCIM) version 1.0 (Nov 15, 2024) for the tool, and this version has **_improved following inference engine estimation_**:
 
-## Versions and Key Features
-**Each version is built upon modifications made in the previous version.**
+## 1. Support for digital CIM hardware evaluations with technology scaling down to 1nm node (C++ code).
+```
+Please specify the following parameters in the Param.cpp for DCIM evaluation.
+Set the memcelltype=4, operationmode=1, toggle_enforce=1.
 
-**1. 2D Inference: DNN+NeuroSim evaluating DNN inference performance on 2D in-memory computing or near-memory computing architectures.**
-+ 2DInferenceV1.4: (1) Support 130nm~1nm technology node (2) Introduce partial parallel mode (3) Add XY bus as an alternative to H-tree interconnect
-+ 2DInferenceV1.3: (1) Validate with real silicon data (2) Introduce synchronous and asynchronous mode (3) Update technology file for FinFET (4) Add level shifter for eNVM
-+ 2DInferenceV1.2: (1) Calibrate temperature-related and layout features of FinFET technology (2) Add voltageSA-based multi-level SA and SAR ADC, in addition to the original CurrentSA-based multi-level SA
-+ 2DInferenceV1.1: (1) Implement a multi-core architecture in the buffer for high parallelism (2) Introduce low-swing interconnect (3) Calibrate FinFET technology library (4) Add device non-ideal factors (5) Enable pipeline execution
-+ 2DInferenceV1.0: (1) Provide an end-to-end benchmarking framework, (2) Support various memory technologies and technology nodes (130nm~7nm), (3) Features hierarchical simulation from chip level to array level
-+ 2DInferenceTPUV1.0: Wrap the DNN, TPU, and NeuroSim to evaluate the PPA of the TPU chip supporting the latest technology node in 2DInferenceV1.4.
+operationmode = 1;
+memcelltype = 4;
+toggle_enforce=1;
 
-**2. 2D Training: DNN+NeuroSim evaluating DNN inference performance and on-chip training performance on 2D in-memory computing or near-memory computing architectures.**
-+ 2DTrainingV2.2 (based on 2DInferenceV1.4): (1) Implement the latest hardware components and technology
-+ 2DTrainingV2.1 (based on 2DInferenceV1.2): (1) Include FeFET polarization during weight-update
-+ 2DTrainingV2.0 (based on 2DInferenceV1.1): (1) Support on-chip training simulation and evaluation (2) Include more non-ideal properties of synaptic devices in programming compared to 2DInferenceV1.1
+Please also set the parameter "technode" to specify the technology node (from 130nm to 1nm).
 
-**3. 3D Inference: DNN+NeuroSim evaluating DNN inference performance on heterogeneous 3D (H3D) and monolithic (M3D) in-memory computing or near-memory computing architectures.**
-+ 3DInferenceV1.1 (based on 2DInferenceV1.4): (1) Implement the latest hardware evaluation (technology node, interconnect, synchronous and asynchronous computing, ...)
-+ 3DInferenceV1.0 (based on 2DInferenceV1.3): (1) Support H3D and M3D evaluation
+```
+Note: 
+(1) For now, we only support the 256x256 subarray for DCIM. Please change the technology node while using default values for other parameters.
 
-**4. MLP Inference: MLP+NeuroSim evaluating DNN inference performance on 2D near-memory computing architectures.**
-+ MLPInferenceV3.0: (1) Introduce weight representation (-1,1) in addition to the original (0,1) (2) Support more training optimization methods such as momentum method, Adagrad, RMSprop, Adam(3) Support parallel read-out for digital eNVMs (e.g. STT-MRAM) (4) Add hybrid precision synapses
-+ MLPInferenceV2.0: (1) Support more device technologies (2) Optimize weight update scheme
-+ MLPInferenceV1.0: (1) Support analog eNVM devices (RRAM or PCM)
+(2) This version also supports the evaluation of analog CIM which is the same as V1.4 [DNN+NeuroSim V1.4](https://github.com/neurosim/DNN_NeuroSim_V1.4). Please refer to the [V1.4](https://github.com/neurosim/DNN_NeuroSim_V1.4) for analog CIM evaluation.
 
-Note: Please refer to the manual in the respective version branch for installation instructions, file lists, release dates, and additional usage details.
 
-## Acknowledgement
+## Installation steps (Linux + Anaconda/Miniconda)
+We recommend using anaconda package manager to install PyTorch.
+
+This version supports the recently released PyTorch 2.0
+
+We have currently tested the following operating systems and drivers:
+
+(1) 
+Red Hat 8.8 (Ootpa)
+gcc: v8.5.0
+glibc: v2.28
+NVIDIA Driver Version: 535.54.03
+CUDA Version: 12.2
+
+(2)
+Ubuntu 20.04
+gcc: v9.4.0
+glibc: v2.31
+NVIDIA Driver Version: 525.60.13
+CUDA Version: 12.0
+
+### 1. Download Anaconda/Miniconda: https://docs.conda.io/en/latest/miniconda.html
+### 2. Follow install instructions: https://docs.conda.io/en/latest/miniconda.html#installing
+
+### 3. Get the tool from GitHub
+```
+git clone https://github.com/neurosim/DNN_DCIM_NeuroSim_V1.0.git
+cd DNN_DCIM_NeuroSim_V1.0
+```
+
+### 4. Create a conda environment
+
+```
+conda create --name neurosim
+```
+
+### 5. Activate neurosim environment
+
+```
+conda activate neurosim
+```
+
+### 6. Download and install PyTorch packages
+
+```
+conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
+```
+
+### 7. Pick a network architecture. The following have been pre-trained and provided with NeuroSim.
+```
+1. VGG8 on cifar10 
+   8-bit "WAGE" mode pretrained model is uploaded to './log/VGG8.pth'
+2. DenseNet40 on cifar10 
+   8-bit "WAGE" mode pretrained model is uploaded to './log/DenseNet40.pth'
+3. ResNet18 on imagenet 
+   "FP" mode pretrained model is loaded from 'https://download.pytorch.org/models/resnet18-5c106cde.pth'
+```
+
+### 8. (Optional) Train the network to get the model for inference
+
+### 9. Compile the NeuroSim C++ code
+```
+cd Inference_pytorch/NeuroSIM
+make
+```
+
+### 10. Run Pytorch/Tensorflow wrapper (integrated with NeuroSim). The following are some examples with arguments.
+
+```
+cd ..
+
+python inference.py --dataset cifar10 --model VGG8 --mode WAGE --inference 1 --cellBit 1 --subArray 128 --parallelRead 64
+python inference.py --dataset cifar10 --model DenseNet40 --mode WAGE --inference 1 --cellBit 2 --ADCprecision 6
+python inference.py --dataset imagenet --model ResNet18 --mode FP --inference 1 --onoffratio 100
+```
+
+<br/>
+
+**_For estimation of on-chip training accelerators, please visit released V2.1 [DNN+NeuroSim V2.1](https://github.com/neurosim/DNN_NeuroSim_V2.1)_**
+```
+NOTE: the on-chip training framework has not yet been updated to support the features released in this version (DNN+DCIM+NeuroSim V1.0).
+
+We plan to support the technology scaling to 1nm, partial parallel mode and the XY bus in a future update.  
+```
+In Pytorch/Tensorflow wrapper, users are able to define **_network structures, precision of synaptic weight and neural activation_**. With the integrated NeuroSim which takes real traces from wrapper, the framework can support hierarchical organization from device level to circuit level, to chip level and to algorithm level, enabling **_instruction-accurate evaluation on both accuracy and hardware performance of inference_**.
+
+Developers: [Junmo Lee](mailto:junmolee@gatech.edu) :two_men_holding_hands: [James Read](mailto:jread6@gatech.edu) :couple: Anni Lu :two_women_holding_hands: Xiaochen Peng :two_women_holding_hands: Shanshi Huang.
+
 This research is supported by NSF CAREER award, NSF/SRC E2CDA program, the ASCENT center (SRC/DARPA JUMP 1.0) and the PRISM and CHIMES centers (SRC/DARPA JUMP 2.0).
 
-## Developers
-:two_men_holding_hands: [Junmo Lee](mailto:junmolee@gatech.edu) :two_men_holding_hands: [James Read](mailto:jread6@gatech.edu) :couple: Anni Lu :two_women_holding_hands: Xiaochen Peng :two_women_holding_hands: Shanshi Huang :two_men_holding_hands: [Ming-Yen Lee](mailto:mlee838@gatech.edu)
+If you use the tool or adapt the tool in your work or publication, you are required to cite the following reference:
 
-## Citations
-If you use the tool or adapt the tool in your work or publication, you are required to cite the reference mentioned in the corresponding version branch.
+**_J. Lee, A. Lu, W. Li, S. Yu, ※[NeuroSim V1.4: Extending Technology Support for Digital Compute-in-Memory Toward 1nm Node](https://ieeexplore.ieee.org/abstract/document/10443264), *§ IEEE Transactions on Circuits and Systems I: Regular Papers, 2024._**
 
-## Contact
-If you have logistic questions or comments on the model, please contact :man: [Prof. Shimeng Yu](mailto:shimeng.yu@ece.gatech.edu), and if you have technical questions or comments, please contact :man: [Junmo Lee](mailto:junmolee@gatech.edu) or :man: [James Read](mailto:jread6@gatech.edu) or :man: [Ming-Yen Lee](mailto:mlee838@gatech.edu)
+If you have logistic questions or comments on the model, please contact :man: [Prof. Shimeng Yu](mailto:shimeng.yu@ece.gatech.edu), and if you have technical questions or comments, please contact :man: [Junmo Lee](mailto:junmolee@gatech.edu) or :man: [James Read](mailto:jread6@gatech.edu) or :man: [Ming-Yen Lee](mailto:mlee838@gatech.edu).
 
-## Recent Update
-:star2: [2024.10.25] Training version with the latest hardware evaluation is available. Check branch 2DTrainingV2.2 for more details.
 
-:star2: [2024.10.16] H3D version with the latest hardware evaluation is available. Check branch 3DInferenceV1.1/H3D for more details.
+## File lists
+1. Manual: `Documents/DNN NeuroSim V1.4 Manual.pdf`
+2. DNN_NeuroSim wrapped by Pytorch: 'Inference_pytorch'
+3. NeuroSim under Pytorch Inference: 'Inference_pytorch/NeuroSIM'
 
-:star2: [2024.10.10] M3D version with the latest hardware evaluation is available. Check branch 3DInferenceV1.1/M3D for more details.
+For additional details on the usage of this tool, please refer to the manual and our [TCAS-I paper](https://ieeexplore.ieee.org/abstract/document/10443264).
 
-## References related to this tool
-1. J. Lee, A. Lu, W. Li, S. Yu, ※NeuroSim V1. 4: Extending Technology Support for Digital Compute-in-Memory Toward 1nm Node, *§ IEEE Transactions on Circuits and Systems I: Regular Papers*, 2024.
-2. A. Lu, X. Peng, W. Li, H. Jiang, S. Yu, ※NeuroSim simulator for compute-in-memory hardware accelerator: validation and benchmark, *§ Frontiers in Artificial Intelligence*, vol. 4, 659060, 2021.
-3. X. Peng, S. Huang, H. Jiang, A. Lu and S. Yu, ※DNN+NeuroSim V2.0: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators for On-Chip Training, *§ IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems*, 2021.
-4. X. Peng, S. Huang, Y. Luo, X. Sun and S. Yu, ※DNN+NeuroSim: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators with Versatile Device Technologies, *§ IEEE International Electron Devices Meeting (IEDM)*, 2019.
-5. Y. Luo, X. Peng, and S. Yu. ※MLP+ NeuroSimV3.0: Improving on-chip learning performance with device to algorithm optimizations, *§ Proceedings of the international conference on neuromorphic systems*, 2019.
-6. X. Peng, R. Liu, S. Yu, ※Optimizing weight mapping and data flow for convolutional neural networks on RRAM based processing-in-memory architecture, *§ IEEE International Symposium on Circuits and Systems (ISCAS)*, 2019.
-7. P.-Y. Chen, S. Yu, ※Technological benchmark of analog synaptic devices for neuro-inspired architectures, *§ IEEE Design & Test*, 2019.
-8. P.-Y. Chen, X. Peng, S. Yu, ※NeuroSim: A circuit-level macro model for benchmarking neuro-inspired architectures in online learning, *§ IEEE Trans. CAD*, 2018.
-9. X. Sun, S. Yin, X. Peng, R. Liu, J.-S. Seo, S. Yu, ※XNOR-RRAM: A scalable and parallel resistive synaptic architecture for binary neural networks,*§ ACM/IEEE Design, Automation & Test in Europe Conference (DATE)*, 2018.
-10. P.-Y. Chen, X. Peng, S. Yu, ※NeuroSim+: An integrated device-to-algorithm framework for benchmarking synaptic devices and array architectures, *§ IEEE International Electron Devices Meeting (IEDM)*, 2017.
-11. P.-Y. Chen, S. Yu, ※Partition SRAM and RRAM based synaptic arrays for neuro-inspired computing,*§ IEEE International Symposium on Circuits and Systems (ISCAS)*, 2016.
-12. P.-Y. Chen, D. Kadetotad, Z. Xu, A. Mohanty, B. Lin, J. Ye, S. Vrudhula, J.-S. Seo, Y. Cao, S. Yu, ※Technology-design co-optimization of resistive cross-point array for accelerating learning algorithms on chip,*§ IEEE Design, Automation & Test in Europe (DATE)*, 2015.
-13. S. Wu, et al., ※Training and inference with integers in deep neural networks,*§ arXiv: 1802.04680*, 2018.
-14. github.com/boluoweifenda/WAGE
-15. github.com/stevenygd/WAGE.pytorch
-16. github.com/aaron-xichen/pytorch-playground
+
+## References related to this tool 
+1. J. Lee, A. Lu, W. Li, S. Yu, ※NeuroSim V1.4: Extending Technology Support for Digital Compute-in-Memory Toward 1nm Node, *§ IEEE Transactions on Circuits and Systems I: Regular Papers, 2024.
+2. A. Lu, X. Peng, W. Li, H. Jiang, S. Yu, ※NeuroSim simulator for compute-in-memory hardware accelerator: validation and benchmark, *§ Frontiers in Artificial Intelligence, vol. 4, 659060, 2021.
+3. X. Peng, S. Huang, Y. Luo, X. Sun and S. Yu, ※DNN+NeuroSim: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators with Versatile Device Technologies, *§ IEEE International Electron Devices Meeting (IEDM)*, 2019.
+4. X. Peng, R. Liu, S. Yu, ※Optimizing weight mapping and data flow for convolutional neural networks on RRAM based processing-in-memory architecture, *§ IEEE International Symposium on Circuits and Systems (ISCAS)*, 2019.
+5. P.-Y. Chen, S. Yu, ※Technological benchmark of analog synaptic devices for neuro-inspired architectures, *§ IEEE Design & Test*, 2019.
+6. P.-Y. Chen, X. Peng, S. Yu, ※NeuroSim: A circuit-level macro model for benchmarking neuro-inspired architectures in online learning, *§ IEEE Trans. CAD*, 2018.
+7. X. Sun, S. Yin, X. Peng, R. Liu, J.-S. Seo, S. Yu, ※XNOR-RRAM: A scalable and parallel resistive synaptic architecture for binary neural networks,*§ ACM/IEEE Design, Automation & Test in Europe Conference (DATE)*, 2018.
+8. P.-Y. Chen, X. Peng, S. Yu, ※NeuroSim+: An integrated device-to-algorithm framework for benchmarking synaptic devices and array architectures, *§ IEEE International Electron Devices Meeting (IEDM)*, 2017.
+9. P.-Y. Chen, S. Yu, ※Partition SRAM and RRAM based synaptic arrays for neuro-inspired computing,*§ IEEE International Symposium on Circuits and Systems (ISCAS)*, 2016.
+10. P.-Y. Chen, D. Kadetotad, Z. Xu, A. Mohanty, B. Lin, J. Ye, S. Vrudhula, J.-S. Seo, Y. Cao, S. Yu, ※Technology-design co-optimization of resistive cross-point array for accelerating learning algorithms on chip,*§ IEEE Design, Automation & Test in Europe (DATE)*, 2015.
+11. S. Wu, et al., ※Training and inference with integers in deep neural networks,*§ arXiv: 1802.04680*, 2018.
+12. github.com/boluoweifenda/WAGE
+13. github.com/stevenygd/WAGE.pytorch
+14. github.com/aaron-xichen/pytorch-playground

@@ -8,12 +8,14 @@ The NeuroSim framework was developed by [Prof. Shimeng Yu's group](https://shime
 **Each version is built upon modifications made in the previous version.**
 
 **1. 2D Inference: DNN+NeuroSim evaluating DNN inference performance on 2D in-memory computing or near-memory computing architectures.**
++ 2DInferenceDigitalSystolicArrayV1.0: (1) Wrap the DNN, digital systolic array, and NeuroSim to evaluate the PPA of the TPU chip supporting the latest technology node in 2DInferenceV1.4.
++ 2DInferenceDCIMV1.0: (1) Support digital CIM hardware evaluations with technology scaling down to 1nm node (2) Implement the latest evaluation framework in 2DInferenceV1.4.
 + 2DInferenceV1.4: (1) Support 130nm~1nm technology node (2) Introduce partial parallel mode (3) Add XY bus as an alternative to H-tree interconnect
 + 2DInferenceV1.3: (1) Validate with real silicon data (2) Introduce synchronous and asynchronous mode (3) Update technology file for FinFET (4) Add level shifter for eNVM
 + 2DInferenceV1.2: (1) Calibrate temperature-related and layout features of FinFET technology (2) Add voltageSA-based multi-level SA and SAR ADC, in addition to the original CurrentSA-based multi-level SA
 + 2DInferenceV1.1: (1) Implement a multi-core architecture in the buffer for high parallelism (2) Introduce low-swing interconnect (3) Calibrate FinFET technology library (4) Add device non-ideal factors (5) Enable pipeline execution
 + 2DInferenceV1.0: (1) Provide an end-to-end benchmarking framework, (2) Support various memory technologies and technology nodes (130nm~7nm), (3) Features hierarchical simulation from chip level to array level
-+ 2DInferenceTPUV1.0: Wrap the DNN, TPU, and NeuroSim to evaluate the PPA of the TPU chip supporting the latest technology node in 2DInferenceV1.4.
+
 
 **2. 2D Training: DNN+NeuroSim evaluating DNN inference performance and on-chip training performance on 2D in-memory computing or near-memory computing architectures.**
 + 2DTrainingV2.2 (based on 2DInferenceV1.4): (1) Implement the latest hardware components and technology
@@ -44,6 +46,10 @@ If you use the tool or adapt the tool in your work or publication, you are requi
 If you have logistic questions or comments on the model, please contact :man: [Prof. Shimeng Yu](mailto:shimeng.yu@ece.gatech.edu), and if you have technical questions or comments, please contact :man: [Junmo Lee](mailto:junmolee@gatech.edu) or :man: [James Read](mailto:jread6@gatech.edu) or :man: [Ming-Yen Lee](mailto:mlee838@gatech.edu)
 
 ## Recent Update
+:star2: [2024.11.18] DCIM version with the latest hardware evaluation is available. Check branch 2DInferenceDCIMV1.0 for more details.
+
+:star2: [2024.11.18] Digital systolic array version with the latest hardware evaluation is available. Check branch 2DInferenceDigitalSystolicArrayV1.0 for more details.
+
 :star2: [2024.10.25] Training version with the latest hardware evaluation is available. Check branch 2DTrainingV2.2 for more details.
 
 :star2: [2024.10.16] H3D version with the latest hardware evaluation is available. Check branch 3DInferenceV1.1/H3D for more details.

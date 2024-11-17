@@ -75,9 +75,9 @@ If you have logistic questions or comments on the model, please contact :man: [P
 
 ## File lists
 1. Manual: `documents/User Manual of NeuroSim Digital Systolic Array Simulator.pdf`, `documents/readme.txt`
-2. DNN_TPU wrapped by Pytorch: `main.py`, `input.py`, `evaluate.py`, `hardware.py`, `parameters.py`, `utils.py`
+2. DNN with digital systolic arrays wrapped by Pytorch: `main.py`, `input.py`, `evaluate.py`, `hardware.py`, `parameters.py`, `utils.py`
 3. NeuroSim under Pytorch Inference: '/NeuroSIM'
-4. TPU memory access count tables (from Timeloop): '/traces'
+4. Memory and buffer access count tables (from Timeloop): '/traces'
 
 For additional details on the usage of this tool, please refer to the manual.
 

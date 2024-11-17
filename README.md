@@ -8,7 +8,7 @@ The NeuroSim framework was developed by [Prof. Shimeng Yu's group](https://shime
 **Each version is built upon modifications made in the previous version.**
 
 **1. 2D Inference: DNN+NeuroSim evaluating DNN inference performance on 2D in-memory computing or near-memory computing architectures.**
-+ 2DInferenceDigitalSystolicArrayV1.0: (1) Wrap the DNN, digital systolic array, and NeuroSim to evaluate the PPA of the TPU chip supporting the latest technology node in 2DInferenceV1.4.
++ 2DInferenceDigitalSystolicArrayV1.0: (1) Wrap the DNN, digital systolic array, and NeuroSim to evaluate the PPA of digital systolic arrays supporting the latest technology node in 2DInferenceV1.4.
 + 2DInferenceDCIMV1.0: (1) Support digital CIM hardware evaluations with technology scaling down to 1nm node (2) Implement the latest evaluation framework in 2DInferenceV1.4.
 + 2DInferenceV1.4: (1) Support 130nm~1nm technology node (2) Introduce partial parallel mode (3) Add XY bus as an alternative to H-tree interconnect
 + 2DInferenceV1.3: (1) Validate with real silicon data (2) Introduce synchronous and asynchronous mode (3) Update technology file for FinFET (4) Add level shifter for eNVM

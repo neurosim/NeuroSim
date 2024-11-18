@@ -18,12 +18,10 @@ The NeuroSim framework was developed by [Prof. Shimeng Yu's group](https://shime
 
 
 **2. 2D Training: DNN+NeuroSim evaluating DNN inference performance and on-chip training performance on 2D in-memory computing or near-memory computing architectures.**
-+ 2DTrainingV2.2 (based on 2DInferenceV1.4): (1) Implement the latest hardware components and technology
 + 2DTrainingV2.1 (based on 2DInferenceV1.2): (1) Include FeFET polarization during weight-update
 + 2DTrainingV2.0 (based on 2DInferenceV1.1): (1) Support on-chip training simulation and evaluation (2) Include more non-ideal properties of synaptic devices in programming compared to 2DInferenceV1.1
 
 **3. 3D Inference: DNN+NeuroSim evaluating DNN inference performance on heterogeneous 3D (H3D) and monolithic (M3D) in-memory computing or near-memory computing architectures.**
-+ 3DInferenceV1.1 (based on 2DInferenceV1.4): (1) Implement the latest hardware evaluation (technology node, interconnect, synchronous and asynchronous computing, ...)
 + 3DInferenceV1.0 (based on 2DInferenceV1.3): (1) Support H3D and M3D evaluation
 
 **4. MLP Inference: MLP+NeuroSim evaluating DNN inference performance on 2D near-memory computing architectures.**
@@ -49,12 +47,6 @@ If you have logistic questions or comments on the model, please contact :man: [P
 :star2: [2024.11.18] DCIM version with the latest hardware evaluation is available. Check branch 2DInferenceDCIMV1.0 for more details.
 
 :star2: [2024.11.18] Digital systolic array version with the latest hardware evaluation is available. Check branch 2DInferenceDigitalSystolicArrayV1.0 for more details.
-
-:star2: [2024.10.25] Training version with the latest hardware evaluation is available. Check branch 2DTrainingV2.2 for more details.
-
-:star2: [2024.10.16] H3D version with the latest hardware evaluation is available. Check branch 3DInferenceV1.1/H3D for more details.
-
-:star2: [2024.10.10] M3D version with the latest hardware evaluation is available. Check branch 3DInferenceV1.1/M3D for more details.
 
 ## References related to this tool
 1. J. Lee, A. Lu, W. Li, S. Yu, ※NeuroSim V1. 4: Extending Technology Support for Digital Compute-in-Memory Toward 1nm Node, *§ IEEE Transactions on Circuits and Systems I: Regular Papers*, 2024.

@@ -550,7 +550,7 @@ int main(int argc, char * argv[]) {
     cout << "------------------------------ Simulation Performance --------------------------------" <<  endl;
     
     
-    // 1.4+ DCIM (use the code below to record the results in the file)
+    // Performance details (use the code below to record the results in the file, please specify the subarray size to 256x256, the input bit and weight bit to 4-bit in Param.cpp and inference.py)
     // fstream read4;
     // double TOPS_W= 2*256*64/( param->Macrototaldynamic*4/param->totalsubarrayoperations)*1/pow(10,12) ; // metrics in subarray level
     // double TOPS_mm= 2*256*64/ param->Macrototallatency/( param->subarray_height *param->subarray_width) /pow(10,6)/pow(10,12);

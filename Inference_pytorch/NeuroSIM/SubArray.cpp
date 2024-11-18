@@ -1250,6 +1250,7 @@ void SubArray::CalculateLatency(double columnRes, const vector<double> &columnRe
 						// readLatency += colDelay;	   
 						readLatency += multilevelSenseAmp.readLatency;
 
+						param -> WL_delay = MAX(wlSwitchMatrix.readLatency + bufferlatency, ((numColMuxed > 1)==true? (mux.readLatency+muxDecoder.readLatency):0) );
 						param->rowdelay = wlSwitchMatrix.readLatency + bufferlatency;
 						param->muxdelay = mux.readLatency+muxDecoder.readLatency;
 						param->ADClatency = multilevelSenseAmp.readLatency;
@@ -1257,6 +1258,7 @@ void SubArray::CalculateLatency(double columnRes, const vector<double> &columnRe
 						readLatency += multilevelSAEncoder.readLatency;
 						readLatency += sarADC.readLatency;
 						readLatency *= (validated==true? param->beta : 1);	// latency factor of sensing cycle, beta = 1.4 by default
+						param -> Macrototallatency = readLatency *numColMuxed * param->numBitInput;
 					}
 				}
 				if (!CalculateclkFreq) {
@@ -1717,9 +1719,9 @@ void SubArray::CalculateLatency(double columnRes, const vector<double> &columnRe
 						readLatency *= (validated==true? param->beta : 1);	// latency factor of sensing cycle, beta = 1.4 by default									
 						param->rowdelay = wlNewSwitchMatrix.readLatency + wlSwitchMatrix.readLatency + bufferlatency;
 						param->muxdelay = mux.readLatency+muxDecoder.readLatency;
-						param->ADClatency = multilevelSenseAmp.readLatency;					
-					
-					
+						param->ADClatency = multilevelSenseAmp.readLatency;
+						param -> WL_delay = MAX(wlSwitchMatrix.readLatency + bufferlatency, ((numColMuxed > 1)==true? (mux.readLatency+muxDecoder.readLatency):0) );
+						param -> Macrototallatency = readLatency * numColMuxed * param->numBitInput;
 					}
 				}
 				if (!CalculateclkFreq) {

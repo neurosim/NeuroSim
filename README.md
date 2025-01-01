@@ -22,11 +22,10 @@ CUDA Version: 12.2
 ### 2. Follow install instructions: https://docs.conda.io/en/latest/miniconda.html#installing
 
 ### 3. Get the tool from GitHub
-
-git clone https://github.com/neurosim/DNN_NeuroSim_Digital_Systolic_Array_V1.0.git
- 
-cd DNN_NeuroSim_Digital_Systolic_Array_V1.0.git
-
+```
+git clone -b 2DInferenceDigitalSystolicArrayV1.0 --single-branch https://github.com/neurosim/NeuroSim.git
+cd NeuroSim
+```
 ### 4. Create a conda environment
 
 ```

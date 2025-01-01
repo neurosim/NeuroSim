@@ -32,6 +32,15 @@ The versions are categorized into four types: **2D Inference**, **2D Training**,
 
 Note: Please refer to the manual in the respective version branch for installation instructions, file lists, release dates, and additional usage details.
 
+## Installation steps
+Please refer to the installation instructions in each branch to set up the version you selected.
+If you wish to download all versions and switch between them, use the following command:
+```
+git clone https://github.com/neurosim/NeuroSim.git
+cd NeuroSim
+git checkout <NeuroSim_branch_name>
+```
+
 ## Acknowledgement
 This research is supported by NSF CAREER award, NSF/SRC E2CDA program, the ASCENT center (SRC/DARPA JUMP 1.0) and the PRISM and CHIMES centers (SRC/DARPA JUMP 2.0).
 

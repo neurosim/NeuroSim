@@ -74,7 +74,7 @@ If you have logistic questions or comments on the model, please contact :man: [P
 ## Installation steps (Linux)
 1. Get the tool from GitHub
 ```
-git clone https://github.com/neurosim/3D_NeuroSim_V1.0.git
+git clone -b 3DInferenceV1.0 --single-branch https://github.com/neurosim/NeuroSim.git
 ```
 
 2. Go to the folder for either monolithic or heterogeneous 3D integration

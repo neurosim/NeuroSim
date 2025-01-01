@@ -76,8 +76,8 @@ CUDA Version: 12.0
 
 ### 3. Get the tool from GitHub
 ```
-git clone https://github.com/neurosim/DNN_NeuroSim_V1.4.git
-cd DNN_NeuroSim_V1.4
+git clone -b 2DInferenceV1.4 --single-branch https://github.com/neurosim/NeuroSim.git
+cd NeuroSim
 ```
 
 ### 4. Create a conda environment

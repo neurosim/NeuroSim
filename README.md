@@ -57,7 +57,7 @@ If you have logistic questions or comments on the model, please contact :man: [P
 ## Installation steps (Linux)
 1. Get the tool from GitHub
 ```
-git clone https://github.com/neurosim/DNN_NeuroSim_V2.1.git
+git clone -b 2DTrainingV2.1 --single-branch https://github.com/neurosim/NeuroSim.git
 ```
 
 2. Set up hardware parameters in NeuroSim Core and compile the Code

@@ -25,7 +25,7 @@ The versions are categorized into four types: **2D Inference**, **2D Training**,
 **3. 3D Inference: DNN+NeuroSim evaluating DNN inference performance on heterogeneous 3D (H3D) and monolithic (M3D) in-memory computing or near-memory computing architectures.**
 + 3DInferenceV1.0 (based on 2DInferenceV1.3): (1) Support H3D and M3D evaluation
 
-**4. MLP Inference: MLP+NeuroSim evaluating DNN inference performance on 2D near-memory computing architectures.**
+**4. MLP Inference: MLP+NeuroSim evaluating DNN inference performance on 2D in-memory computing architectures.**
 + MLPInferenceV3.0: (1) Introduce weight representation (-1,1) in addition to the original (0,1) (2) Support more training optimization methods such as momentum method, Adagrad, RMSprop, Adam(3) Support parallel read-out for digital eNVMs (e.g. STT-MRAM) (4) Add hybrid precision synapses
 + MLPInferenceV2.0: (1) Support more device technologies (2) Optimize weight update scheme
 + MLPInferenceV1.0: (1) Support analog eNVM devices (RRAM or PCM)
@@ -54,9 +54,9 @@ If you use the tool or adapt the tool in your work or publication, you are requi
 If you have logistic questions or comments on the model, please contact :man: [Prof. Shimeng Yu](mailto:shimeng.yu@ece.gatech.edu), and if you have technical questions or comments, please contact :man: [Junmo Lee](mailto:junmolee@gatech.edu) or :man: [James Read](mailto:jread6@gatech.edu) or :man: [Ming-Yen Lee](mailto:mlee838@gatech.edu)
 
 ## Recent Update
-:star2: [2024.11.18] DCIM version with the latest hardware evaluation is available. Check branch 2DInferenceDCIMV1.0 for more details.
+:star2: [2025.01.01] DCIM version with the latest hardware evaluation is available. Check branch 2DInferenceDCIMV1.0 for more details.
 
-:star2: [2024.11.18] Digital systolic array version with the latest hardware evaluation is available. Check branch 2DInferenceDigitalSystolicArrayV1.0 for more details.
+:star2: [2025.01.01] Digital systolic array version with the latest hardware evaluation is available. Check branch 2DInferenceDigitalSystolicArrayV1.0 for more details.
 
 ## References related to this tool
 1. J. Lee, A. Lu, W. Li, S. Yu, ※NeuroSim V1. 4: Extending Technology Support for Digital Compute-in-Memory Toward 1nm Node, *§ IEEE Transactions on Circuits and Systems I: Regular Papers*, 2024.

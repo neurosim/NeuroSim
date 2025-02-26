@@ -263,16 +263,18 @@ void MultilevelSenseAmp::CalculatePower(const vector<double> &columnResistance, 
 			double refpower = 0;
 
 			// 1.4 update - reference column power
+			// update column power calibration
 			for (double ii=1; ii<Rref.size()-1; ii++) {
-				refpower += GetColumnPower(Rref[ii])/ (param->dumcolshared);
+				double columnPower = max(GetColumnPower(Rref[ii]), 0.0);
+				refpower += columnPower/ (param->dumcolshared);
 			}
 
 			for (double i=0; i<columnResistance.size(); i++) {
 				double P_Col = 0;
-				P_Col = GetColumnPower(columnResistance[i]);
+				P_Col = max(GetColumnPower(columnResistance[i]), 0.0);
 				P_Col += refpower;
 				if (currentMode) {
-
+					
 					// 1.4 update - power (dynamic)
 
 					double Vread = 0;

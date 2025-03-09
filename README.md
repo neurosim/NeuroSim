@@ -65,9 +65,11 @@ Developers: Anni Lu :couple: Yandong Luo :two_men_holding_hands: [Junmo Lee](mai
 
 This research is supported by NSF CAREER award, NSF/SRC E2CDA program, the ASCENT center (SRC/DARPA JUMP 1.0) and the PRISM and CHIMES centers (SRC/DARPA JUMP 2.0).
 
-If you use the tool or adapt the tool in your work or publication, you are required to cite the following reference:
+If you use the tool or adapt the tool in your work or publication, you are required to cite the following references:
 
 **_A. Lu, J. Lee, T. H. Kim, M. Karim, R. S. Park, H. Simka, S. Yu, ※[High-speed emerging memories for AI hardware accelerators](https://www.nature.com/articles/s44287-023-00002-9). *§Nature Reviews Electrical Engineering*, 1(1), 24-34, 2024._**
+
+**_J. Lee, A. Lu, W. Li, S. Yu, ※[NeuroSim V1.4: Extending Technology Support for Digital Compute-in-Memory Toward 1nm Node](https://ieeexplore.ieee.org/document/10443264), *§ IEEE Transactions on Circuits and Systems I: Regular Papers*, 2024._**
 
 If you have logistic questions or comments on the model, please contact :man: [Prof. Shimeng Yu](mailto:shimeng.yu@ece.gatech.edu), and if you have technical questions or comments, please contact :man: [Junmo Lee](mailto:junmolee@gatech.edu) or :man: [James Read](mailto:jread6@gatech.edu) or :man: [Ming-Yen Lee](mailto:mlee838@gatech.edu).
 

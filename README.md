@@ -141,7 +141,8 @@ Developers: [Junmo Lee](mailto:junmolee@gatech.edu) :two_men_holding_hands: [Jam
 This research is supported by NSF CAREER award, NSF/SRC E2CDA program, the ASCENT center (SRC/DARPA JUMP 1.0) and the PRISM and CHIMES centers (SRC/DARPA JUMP 2.0).
 
 If you use the tool or adapt the tool in your work or publication, you are required to cite the following references:
-**_J. Lee, A. Lu, W. Li, S. Yu, ※[NeuroSim V1. 4: Extending Technology Support for Digital Compute-in-Memory Toward 1nm Node](https://ieeexplore.ieee.org/document/10443264), *§ IEEE Transactions on Circuits and Systems I: Regular Papers*, 2024._**
+
+**_J. Lee, A. Lu, W. Li, S. Yu, ※[NeuroSim V1.4: Extending Technology Support for Digital Compute-in-Memory Toward 1nm Node](https://ieeexplore.ieee.org/document/10443264), *§ IEEE Transactions on Circuits and Systems I: Regular Papers*, 2024._**
 
 **_X. Peng, S. Huang, Y. Luo, X. Sun and S. Yu, ※[DNN+NeuroSim: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators with Versatile Device Technologies](https://ieeexplore-ieee-org.prx.library.gatech.edu/document/8993491), *§ IEEE International Electron Devices Meeting (IEDM)*, 2019._**
 

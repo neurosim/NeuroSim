@@ -746,7 +746,10 @@ vector<double> GetColumnResistance(const vector<double> &input, const vector<vec
 	}
 	// covert conductance to resistance
 	for (int i=0; i<weight[0].size(); i++) {
-		resistance.push_back((double) 1.0/conductance[i]);
+		if (conductance[i]==0) // 20250415 update if conductance is 0, resistance is infinite
+			resistance.push_back(1e10);
+		else
+			resistance.push_back((double) 1.0/conductance[i]);
 	}
 		
 	return resistance;

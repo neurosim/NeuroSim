@@ -34,8 +34,9 @@ This version introduces significant improvements to the inference engine for com
 ## Installation Instructions
 1. Download the tool from Github
 ```bash
-git clone https://github.com/neurosim/DNN_NeuroSim_V1.5.git
+git clone https://github.com/neurosim/NeuroSim
 cd DNN_NeuroSim_V1.5
+git checkout 2DInferenceV1.5
 ```
 2. Set the environment name (first line) and install folder prefix (last line) in environment.yml
 

@@ -124,7 +124,7 @@ python inference.py --dataset imagenet --model resnet50 --hardware 1 --bitcell 1
 |-----------|-------------|-------|
 | `--mem_states_file` | Path to CSV with memory state characteristics | "mem_states.csv" |
 | `--off_state` | Device off state (conductance (S) or capacitance (F)) | 1e-15 |
-| `--on_state` | Device on conductance/capacitance | 1e-14 |
+| `--on_state` | Device on conductance/capacitance | 25e-15 |
 
 **Note**: For `--mem_states_file`, you can:
 - Provide a path to a CSV file with detailed memory state definitions

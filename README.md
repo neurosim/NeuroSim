@@ -55,6 +55,8 @@ If you use the tool or adapt the tool in your work or publication, you are requi
 If you have logistic questions or comments on the model, please contact :man: [Prof. Shimeng Yu](mailto:shimeng.yu@ece.gatech.edu), and if you have technical questions or comments, please contact :man: [Junmo Lee](mailto:junmolee@gatech.edu) or :man: [James Read](mailto:jread6@gatech.edu) or :man: [Ming-Yen Lee](mailto:mlee838@gatech.edu)
 
 ## Recent Update
+:star2: [2025.05.01] New DNN+CIM version with faster software backbone simulation, more neural network support (including vision transformer), and flexible noise modeling. Check branch 2DInferenceV1.5 for more details.
+
 :star2: [2025.01.01] DCIM version with the latest hardware evaluation is available. Check branch 2DInferenceDCIMV1.0 for more details.
 
 :star2: [2025.01.01] Digital systolic array version with the latest hardware evaluation is available. Check branch 2DInferenceDigitalSystolicArrayV1.0 for more details.

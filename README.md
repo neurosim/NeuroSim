@@ -9,7 +9,7 @@ This version introduces significant improvements to the inference engine for com
 ### 1. Enhanced Neural Network Support
 - **Custom Model Integration**: Design and use your own neural network architectures from PyTorch, PyTorch Hub, or HuggingFace
 - **Model Quantization**: Seamless integration with NVIDIA TensorRT for post-training quantization
-- **Pre-trained Models**: Includes pre-trained models (VGG8 for CIFAR-10, ResNet18 for CIFAR-100) with capability to import more
+- **Pre-trained Models**: Includes pre-trained models (VGG8 for CIFAR-10, ResNet18 for CIFAR-100). Models trained on imagenet dataset are downloaded from PyTorch hub. Currently supported models are ResNet18 to ResNet151 and swin_t. Support for more models can easily be added by users by following the code in quantize.py
 - **Transformer Support**: Added capability to simulate transformer architectures like Swin-T
 
 ### 2. Flexible Noise Modeling

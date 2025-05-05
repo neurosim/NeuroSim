@@ -9,8 +9,9 @@ The versions are categorized into four types: **2D Inference**, **2D Training**,
 **Each version is built upon modifications made in the previous version.**
 
 **1. 2D Inference: DNN+NeuroSim evaluating DNN inference performance on 2D in-memory computing or near-memory computing architectures.**
-+ 2DInferenceDigitalSystolicArrayV1.0: (1) Wrap the DNN, digital systolic array, and NeuroSim to evaluate the PPA of digital systolic arrays supporting the latest technology node in 2DInferenceV1.4.
++ 2DInferenceDigitalSystolicArrayV1.0: (1) Wrap the DNN, digital systolic array, and NeuroSim to evaluate the PPA of digital systolic arrays supporting the latest technology node in 2DInferenceV1.5.
 + 2DInferenceDCIMV1.0: (1) Support digital CIM hardware evaluations with technology scaling down to 1nm node (2) Implement the latest evaluation framework in 2DInferenceV1.4.
++ 2DInferenceV1.5: (1) New, 6.5X faster software backbone (2) Support for more neural networks (and vision transformer) (3) Automatic post-training quantization with TensoorRT (4) Support for non-volatile capacitor memory
 + 2DInferenceV1.4: (1) Support 130nm~1nm technology node (2) Introduce partial parallel mode (3) Add XY bus as an alternative to H-tree interconnect
 + 2DInferenceV1.3: (1) Validate with real silicon data (2) Introduce synchronous and asynchronous mode (3) Update technology file for FinFET (4) Add level shifter for eNVM
 + 2DInferenceV1.2: (1) Calibrate temperature-related and layout features of FinFET technology (2) Add voltageSA-based multi-level SA and SAR ADC, in addition to the original CurrentSA-based multi-level SA

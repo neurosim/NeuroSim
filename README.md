@@ -9,7 +9,7 @@ This version introduces significant improvements to the inference engine for com
 ### 1. Enhanced Neural Network Support
 - **Custom Model Integration**: Design and use your own neural network architectures from PyTorch, PyTorch Hub, or HuggingFace
 - **Model Quantization**: Seamless integration with NVIDIA TensorRT for post-training quantization
-- **Pre-trained Models**: Includes pre-trained models (VGG8 for CIFAR-10, ResNet18 for CIFAR-100). Models trained on imagenet dataset are downloaded from PyTorch hub. Currently supported models are ResNet18 to ResNet151 and swin_t. Support for more models can easily be added by users by following the code in quantize.py
+- **Pre-trained Models**: Includes pre-trained models (VGG8 for CIFAR-10, ResNet18 for CIFAR-100). Models trained on ImageNet dataset (ResNet-50 and Swin-T) are downloaded from PyTorch hub. Currently supported models are ResNet18 to ResNet151 and Swin-T. Users can easily add support for more models by following the code in quantize.py
 - **Transformer Support**: Added capability to simulate transformer architectures like Swin-T
 
 ### 2. Flexible Noise Modeling
@@ -35,7 +35,7 @@ This version introduces significant improvements to the inference engine for com
 1. Download the tool from Github
 ```bash
 git clone https://github.com/neurosim/NeuroSim
-cd DNN_NeuroSim_V1.5
+cd NeuroSim
 git checkout 2DInferenceV1.5
 ```
 2. Set the environment name (first line) and install folder prefix (last line) in environment.yml

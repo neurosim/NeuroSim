@@ -23,7 +23,7 @@ This version introduces significant improvements to the inference engine for com
   ```
   memcelltype = 4;
   accesstype = 4;
-  chargeDelay = 20e-9; // Set to 20ns as default based on [2]
+  chargeDelay = 5e-9;
   // Other parameters (lines 374 - 382)
   ```
 

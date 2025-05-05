@@ -1,0 +1,156 @@
+RRAM
+clkPeriod: 1.78044e-09
+------------------------------ Summary --------------------------------
+
+ChipArea : 2.15945e+08um^2
+Chip total CIM array : 3.3313e+06um^2
+Total IC Area on chip (Global and Tile/PE local): 2.53969e+07um^2
+Total ADC (or S/As and precharger for SRAM) Area on chip : 2.53789e+07um^2
+Total Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) on chip : 5.1728e+07um^2
+Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, pooling and activation units) : 1.07523e+08um^2
+
+Chip clock period is: 1.78044ns
+Chip pipeline-system-clock-cycle (per image) is: 95418.1ns
+Chip pipeline-system readDynamicEnergy (per image) is: 5.66247e+07pJ
+Chip pipeline-system leakage Energy (per image) is: 523210pJ
+Chip pipeline-system leakage Power (per image) is: 5483.34uW
+Chip pipeline-system buffer readLatency (per image) is: 59784.8ns
+Chip pipeline-system buffer readDynamicEnergy (per image) is: 518259pJ
+Chip pipeline-system ic readLatency (per image) is: 18975ns
+Chip pipeline-system ic readDynamicEnergy (per image) is: 3.54557e+06pJ
+
+************************ Breakdown of Latency and Dynamic Energy *************************
+
+----------- ADC (or S/As and precharger for SRAM) readLatency is : 6409.58ns
+----------- Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) readLatency is : 4729.29ns
+----------- Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, IC, pooling and activation units) readLatency is : 84279.2ns
+----------- ADC (or S/As and precharger for SRAM) readDynamicEnergy is : 2.78591e+07pJ
+----------- Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) readDynamicEnergy is : 1.51656e+07pJ
+----------- Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, IC, pooling and activation units) readDynamicEnergy is : 1.35999e+07pJ
+
+************************ Breakdown of Latency and Dynamic Energy *************************
+
+
+----------------------------- Performance -------------------------------
+Energy Efficiency TOPS/W (Pipelined Process): 17.6682
+Throughput TOPS (Pipelined Process): 12.9099
+Throughput FPS (Pipelined Process): 10480.2
+Compute efficiency TOPS/mm^2 (Pipelined Process): 0.0597831
+
+
+nvCap
+clkPeriod: 5.22132e-09
+------------------------------ Summary --------------------------------
+
+ChipArea : 1.61987e+08um^2
+Chip total CIM array : 917714um^2
+Total IC Area on chip (Global and Tile/PE local): 2.17691e+07um^2
+Total ADC (or S/As and precharger for SRAM) Area on chip : 9.76628e+06um^2
+Total Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) on chip : 5.02264e+07um^2
+Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, pooling and activation units) : 6.21011e+07um^2
+
+Chip clock period is: 5.22132ns
+Chip pipeline-system-clock-cycle (per image) is: 252359ns
+Chip pipeline-system readDynamicEnergy (per image) is: 5.22046e+07pJ
+Chip pipeline-system leakage Energy (per image) is: 1.46447e+06pJ
+Chip pipeline-system leakage Power (per image) is: 5803.12uW
+Chip pipeline-system buffer readLatency (per image) is: 175325ns
+Chip pipeline-system buffer readDynamicEnergy (per image) is: 518259pJ
+Chip pipeline-system ic readLatency (per image) is: 51186.6ns
+Chip pipeline-system ic readDynamicEnergy (per image) is: 3.26704e+06pJ
+
+************************ Breakdown of Latency and Dynamic Energy *************************
+
+----------- ADC (or S/As and precharger for SRAM) readLatency is : 18796.8ns
+----------- Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) readLatency is : 7081.42ns
+----------- Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, IC, pooling and activation units) readLatency is : 226481ns
+----------- ADC (or S/As and precharger for SRAM) readDynamicEnergy is : 3.0551e+07pJ
+----------- Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) readDynamicEnergy is : 1.51656e+07pJ
+----------- Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, IC, pooling and activation units) readDynamicEnergy is : 6.48803e+06pJ
+
+************************ Breakdown of Latency and Dynamic Energy *************************
+
+
+----------------------------- Performance -------------------------------
+Energy Efficiency TOPS/W (Pipelined Process): 18.8135
+Throughput TOPS (Pipelined Process): 4.88128
+Throughput FPS (Pipelined Process): 3962.61
+Compute efficiency TOPS/mm^2 (Pipelined Process): 0.0301338
+
+
+
+nvCap swin_t 32 rows, 8 in parallel
+------------------------------ Summary --------------------------------
+
+ChipArea : 2.40723e+08um^2
+Chip total CIM array : 1.17776e+06um^2
+Total IC Area on chip (Global and Tile/PE local): 1.98288e+07um^2
+Total ADC (or S/As and precharger for SRAM) Area on chip : 4.49222e+06um^2
+Total Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) on chip : 7.24125e+07um^2
+Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, pooling and activation units) : 1.2038e+08um^2
+
+Chip clock period is: 2.48747ns
+Chip pipeline-system-clock-cycle (per image) is: 3.00142e+06ns
+Chip pipeline-system readDynamicEnergy (per image) is: 6.19092e+08pJ
+Chip pipeline-system leakage Energy (per image) is: 2.47047e+07pJ
+Chip pipeline-system leakage Power (per image) is: 8230.99uW
+Chip pipeline-system buffer readLatency (per image) is: 431084ns
+Chip pipeline-system buffer readDynamicEnergy (per image) is: 4.37357e+06pJ
+Chip pipeline-system ic readLatency (per image) is: 556885ns
+Chip pipeline-system ic readDynamicEnergy (per image) is: 4.72259e+07pJ
+
+************************ Breakdown of Latency and Dynamic Energy *************************
+
+----------- ADC (or S/As and precharger for SRAM) readLatency is : 1.99698e+06ns
+----------- Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) readLatency is : 16036.7ns
+----------- Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, IC, pooling and activation units) readLatency is : 988404ns
+----------- ADC (or S/As and precharger for SRAM) readDynamicEnergy is : 2.68961e+08pJ
+----------- Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) readDynamicEnergy is : 2.77089e+08pJ
+----------- Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, IC, pooling and activation units) readDynamicEnergy is : 7.30421e+07pJ
+
+************************ Breakdown of Latency and Dynamic Energy *************************
+
+
+----------------------------- Performance -------------------------------
+Energy Efficiency TOPS/W (Pipelined Process): 8.14478
+Throughput TOPS (Pipelined Process): 2.13138
+Throughput FPS (Pipelined Process): 333.175
+Compute efficiency TOPS/mm^2 (Pipelined Process): 0.00885405
+
+RRAM
+------------------------------ Summary --------------------------------
+
+ChipArea : 2.78277e+08um^2
+Chip total CIM array : 4.27527e+06um^2
+Total IC Area on chip (Global and Tile/PE local): 2.16409e+07um^2
+Total ADC (or S/As and precharger for SRAM) Area on chip : 1.08863e+07um^2
+Total Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) on chip : 6.67424e+07um^2
+Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, pooling and activation units) : 1.74662e+08um^2
+
+Chip clock period is: 1.62225ns
+Chip pipeline-system-clock-cycle (per image) is: 2.22105e+06ns
+Chip pipeline-system readDynamicEnergy (per image) is: 8.23493e+08pJ
+Chip pipeline-system leakage Energy (per image) is: 1.59822e+07pJ
+Chip pipeline-system leakage Power (per image) is: 7195.78uW
+Chip pipeline-system buffer readLatency (per image) is: 281139ns
+Chip pipeline-system buffer readDynamicEnergy (per image) is: 4.37357e+06pJ
+Chip pipeline-system ic readLatency (per image) is: 626514ns
+Chip pipeline-system ic readDynamicEnergy (per image) is: 4.90326e+07pJ
+
+************************ Breakdown of Latency and Dynamic Energy *************************
+
+----------- ADC (or S/As and precharger for SRAM) readLatency is : 1.30237e+06ns
+----------- Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) readLatency is : 11140ns
+----------- Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, IC, pooling and activation units) readLatency is : 907936ns
+----------- ADC (or S/As and precharger for SRAM) readDynamicEnergy is : 4.59473e+08pJ
+----------- Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) readDynamicEnergy is : 2.52351e+08pJ
+----------- Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, IC, pooling and activation units) readDynamicEnergy is : 1.11669e+08pJ
+
+************************ Breakdown of Latency and Dynamic Energy *************************
+
+
+----------------------------- Performance -------------------------------
+Energy Efficiency TOPS/W (Pipelined Process): 6.24626
+Throughput TOPS (Pipelined Process): 2.88025
+Throughput FPS (Pipelined Process): 450.238
+Compute efficiency TOPS/mm^2 (Pipelined Process): 0.0103503

@@ -1,0 +1,38 @@
+RRAM 32 x 32 VGG8
+------------------------------ Summary --------------------------------
+
+ChipArea : 2.15945e+08um^2
+Chip total CIM array : 3.3313e+06um^2
+Total IC Area on chip (Global and Tile/PE local): 2.53969e+07um^2
+Total ADC (or S/As and precharger for SRAM) Area on chip : 2.53789e+07um^2
+Total Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) on chip : 5.1728e+07um^2
+Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, pooling and activation units) : 1.07523e+08um^2
+
+Chip clock period is: 1.78044ns
+Chip pipeline-system-clock-cycle (per image) is: 95418.1ns
+Chip pipeline-system readDynamicEnergy (per image) is: 5.68192e+07pJ
+Chip pipeline-system leakage Energy (per image) is: 523210pJ
+Chip pipeline-system leakage Power (per image) is: 5483.34uW
+Chip pipeline-system buffer readLatency (per image) is: 59784.8ns
+Chip pipeline-system buffer readDynamicEnergy (per image) is: 518259pJ
+Chip pipeline-system ic readLatency (per image) is: 18975ns
+Chip pipeline-system ic readDynamicEnergy (per image) is: 3.54557e+06pJ
+
+************************ Breakdown of Latency and Dynamic Energy *************************
+
+----------- ADC (or S/As and precharger for SRAM) readLatency is : 6409.58ns
+----------- Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) readLatency is : 4729.29ns
+----------- Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, IC, pooling and activation units) readLatency is : 84279.2ns
+----------- ADC (or S/As and precharger for SRAM) readDynamicEnergy is : 2.80355e+07pJ
+----------- Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) readDynamicEnergy is : 1.51656e+07pJ
+----------- Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, IC, pooling and activation units) readDynamicEnergy is : 1.36181e+07pJ
+
+************************ Breakdown of Latency and Dynamic Energy *************************
+
+
+----------------------------- Performance -------------------------------
+Energy Efficiency TOPS/W (Pipelined Process): 17.6083
+Throughput TOPS (Pipelined Process): 12.9099
+Throughput FPS (Pipelined Process): 10480.2
+Compute efficiency TOPS/mm^2 (Pipelined Process): 0.0597831
+

@@ -1,0 +1,120 @@
+XYBus.o: XYBus.cpp constant.h typedef.h formula.h Technology.h XYBus.h \
+ InputParameter.h MemCell.h FunctionUnit.h Param.h
+ProcessingUnit.o: ProcessingUnit.cpp Bus.h typedef.h InputParameter.h \
+ Technology.h MemCell.h FunctionUnit.h SubArray.h formula.h Adder.h \
+ RowDecoder.h Mux.h WLDecoderOutput.h DFF.h DeMux.h Precharger.h \
+ SenseAmp.h DecoderDriver.h SRAMWriteDriver.h ReadCircuit.h \
+ SwitchMatrix.h ShiftAdd.h WLNewDecoderDriver.h constant.h \
+ NewSwitchMatrix.h CurrentSenseAmp.h MultilevelSenseAmp.h \
+ MultilevelSAEncoder.h SarADC.h LevelShifter.h ProcessingUnit.h Param.h \
+ AdderTree.h
+WLNewDecoderDriver.o: WLNewDecoderDriver.cpp constant.h formula.h \
+ Technology.h typedef.h Param.h WLNewDecoderDriver.h FunctionUnit.h \
+ InputParameter.h MemCell.h
+SarADC.o: SarADC.cpp constant.h formula.h Technology.h typedef.h Param.h \
+ SarADC.h InputParameter.h MemCell.h FunctionUnit.h
+RowDecoder.o: RowDecoder.cpp constant.h formula.h Technology.h typedef.h \
+ Param.h RowDecoder.h InputParameter.h MemCell.h FunctionUnit.h
+formula.o: formula.cpp constant.h formula.h Technology.h typedef.h \
+ Param.h
+DFF.o: DFF.cpp constant.h formula.h Technology.h typedef.h Param.h DFF.h \
+ InputParameter.h MemCell.h FunctionUnit.h
+SwitchMatrix.o: SwitchMatrix.cpp constant.h formula.h Technology.h \
+ typedef.h SwitchMatrix.h InputParameter.h MemCell.h FunctionUnit.h DFF.h \
+ Param.h
+Technology.o: Technology.cpp Technology.h typedef.h
+NewSwitchMatrix.o: NewSwitchMatrix.cpp constant.h formula.h Technology.h \
+ typedef.h NewSwitchMatrix.h FunctionUnit.h InputParameter.h MemCell.h \
+ DFF.h Param.h
+DeMux.o: DeMux.cpp constant.h formula.h Technology.h typedef.h DeMux.h \
+ InputParameter.h MemCell.h FunctionUnit.h
+MaxPooling.o: MaxPooling.cpp constant.h formula.h Technology.h typedef.h \
+ Param.h MaxPooling.h InputParameter.h MemCell.h FunctionUnit.h \
+ Comparator.h
+Sigmoid.o: Sigmoid.cpp constant.h formula.h Technology.h typedef.h \
+ Param.h Sigmoid.h InputParameter.h MemCell.h FunctionUnit.h Adder.h \
+ DFF.h RowDecoder.h Mux.h DecoderDriver.h VoltageSenseAmp.h SenseAmp.h \
+ Precharger.h SRAMWriteDriver.h
+Param.o: Param.cpp Param.h constant.h
+HTree.o: HTree.cpp constant.h typedef.h formula.h Technology.h HTree.h \
+ InputParameter.h MemCell.h FunctionUnit.h Param.h
+SramNewSA.o: SramNewSA.cpp constant.h formula.h Technology.h typedef.h \
+ SramNewSA.h InputParameter.h MemCell.h FunctionUnit.h
+Bus.o: Bus.cpp constant.h typedef.h formula.h Technology.h Bus.h \
+ InputParameter.h MemCell.h FunctionUnit.h Param.h
+NewMux.o: NewMux.cpp constant.h formula.h Technology.h typedef.h NewMux.h \
+ FunctionUnit.h InputParameter.h MemCell.h
+main.o: main.cpp constant.h formula.h Technology.h typedef.h Param.h \
+ Tile.h InputParameter.h MemCell.h Chip.h ProcessingUnit.h SubArray.h \
+ FunctionUnit.h Adder.h RowDecoder.h Mux.h WLDecoderOutput.h DFF.h \
+ DeMux.h Precharger.h SenseAmp.h DecoderDriver.h SRAMWriteDriver.h \
+ ReadCircuit.h SwitchMatrix.h ShiftAdd.h WLNewDecoderDriver.h \
+ NewSwitchMatrix.h CurrentSenseAmp.h MultilevelSenseAmp.h \
+ MultilevelSAEncoder.h SarADC.h LevelShifter.h Definition.h
+ShiftAdd.o: ShiftAdd.cpp constant.h formula.h Technology.h typedef.h \
+ Param.h ShiftAdd.h InputParameter.h MemCell.h FunctionUnit.h Adder.h \
+ DFF.h
+SRAMWriteDriver.o: SRAMWriteDriver.cpp constant.h formula.h Technology.h \
+ typedef.h SRAMWriteDriver.h InputParameter.h MemCell.h FunctionUnit.h
+LevelShifter.o: LevelShifter.cpp constant.h formula.h Technology.h \
+ typedef.h Param.h LevelShifter.h FunctionUnit.h InputParameter.h \
+ MemCell.h
+AdderTree.o: AdderTree.cpp constant.h formula.h Technology.h typedef.h \
+ Param.h AdderTree.h InputParameter.h MemCell.h FunctionUnit.h Adder.h
+FunctionUnit.o: FunctionUnit.cpp FunctionUnit.h
+SubArray.o: SubArray.cpp constant.h formula.h Technology.h typedef.h \
+ SubArray.h InputParameter.h MemCell.h FunctionUnit.h Adder.h \
+ RowDecoder.h Mux.h WLDecoderOutput.h DFF.h DeMux.h Precharger.h \
+ SenseAmp.h DecoderDriver.h SRAMWriteDriver.h ReadCircuit.h \
+ SwitchMatrix.h ShiftAdd.h WLNewDecoderDriver.h NewSwitchMatrix.h \
+ CurrentSenseAmp.h MultilevelSenseAmp.h MultilevelSAEncoder.h SarADC.h \
+ LevelShifter.h Param.h
+MultilevelSenseAmp.o: MultilevelSenseAmp.cpp constant.h formula.h \
+ Technology.h typedef.h Param.h MultilevelSenseAmp.h InputParameter.h \
+ MemCell.h FunctionUnit.h CurrentSenseAmp.h
+BitShifter.o: BitShifter.cpp constant.h formula.h Technology.h typedef.h \
+ BitShifter.h InputParameter.h MemCell.h FunctionUnit.h DFF.h
+Mux.o: Mux.cpp constant.h formula.h Technology.h typedef.h Mux.h \
+ InputParameter.h MemCell.h FunctionUnit.h
+CurrentSenseAmp.o: CurrentSenseAmp.cpp constant.h formula.h Technology.h \
+ typedef.h Param.h CurrentSenseAmp.h FunctionUnit.h InputParameter.h \
+ MemCell.h
+VoltageSenseAmp.o: VoltageSenseAmp.cpp constant.h formula.h Technology.h \
+ typedef.h VoltageSenseAmp.h InputParameter.h MemCell.h FunctionUnit.h
+Comparator.o: Comparator.cpp constant.h formula.h Technology.h typedef.h \
+ Param.h Comparator.h InputParameter.h MemCell.h FunctionUnit.h
+Tile.o: Tile.cpp Sigmoid.h typedef.h InputParameter.h Technology.h \
+ MemCell.h FunctionUnit.h Adder.h DFF.h RowDecoder.h Mux.h \
+ DecoderDriver.h VoltageSenseAmp.h SenseAmp.h Precharger.h \
+ SRAMWriteDriver.h BitShifter.h AdderTree.h Buffer.h HTree.h \
+ ProcessingUnit.h SubArray.h formula.h WLDecoderOutput.h DeMux.h \
+ ReadCircuit.h SwitchMatrix.h ShiftAdd.h WLNewDecoderDriver.h constant.h \
+ NewSwitchMatrix.h CurrentSenseAmp.h MultilevelSenseAmp.h \
+ MultilevelSAEncoder.h SarADC.h LevelShifter.h Param.h Tile.h
+Precharger.o: Precharger.cpp constant.h formula.h Technology.h typedef.h \
+ Precharger.h InputParameter.h MemCell.h FunctionUnit.h
+MultilevelSAEncoder.o: MultilevelSAEncoder.cpp constant.h formula.h \
+ Technology.h typedef.h Param.h MultilevelSAEncoder.h InputParameter.h \
+ MemCell.h FunctionUnit.h
+DecoderDriver.o: DecoderDriver.cpp constant.h formula.h Technology.h \
+ typedef.h DecoderDriver.h InputParameter.h MemCell.h FunctionUnit.h
+Chip.o: Chip.cpp MaxPooling.h typedef.h InputParameter.h Technology.h \
+ MemCell.h FunctionUnit.h Comparator.h Sigmoid.h Adder.h DFF.h \
+ RowDecoder.h Mux.h DecoderDriver.h VoltageSenseAmp.h SenseAmp.h \
+ Precharger.h SRAMWriteDriver.h BitShifter.h AdderTree.h Buffer.h HTree.h \
+ ProcessingUnit.h SubArray.h formula.h WLDecoderOutput.h DeMux.h \
+ ReadCircuit.h SwitchMatrix.h ShiftAdd.h WLNewDecoderDriver.h constant.h \
+ NewSwitchMatrix.h CurrentSenseAmp.h MultilevelSenseAmp.h \
+ MultilevelSAEncoder.h SarADC.h LevelShifter.h Tile.h Param.h Chip.h \
+ XYBus.h
+SenseAmp.o: SenseAmp.cpp constant.h formula.h Technology.h typedef.h \
+ SenseAmp.h InputParameter.h MemCell.h FunctionUnit.h
+Adder.o: Adder.cpp constant.h formula.h Technology.h typedef.h Param.h \
+ Adder.h InputParameter.h MemCell.h FunctionUnit.h
+WLDecoderOutput.o: WLDecoderOutput.cpp constant.h formula.h Technology.h \
+ typedef.h WLDecoderOutput.h InputParameter.h MemCell.h FunctionUnit.h
+ReadCircuit.o: ReadCircuit.cpp constant.h formula.h Technology.h \
+ typedef.h ReadCircuit.h InputParameter.h MemCell.h FunctionUnit.h
+Buffer.o: Buffer.cpp constant.h formula.h Technology.h typedef.h Param.h \
+ Buffer.h InputParameter.h MemCell.h FunctionUnit.h RowDecoder.h \
+ Precharger.h SenseAmp.h SRAMWriteDriver.h DFF.h

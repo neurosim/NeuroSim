@@ -178,7 +178,7 @@ To add your own neural network model:
 
 If you use the tool or adapt the tool in your work or publication, you are required to cite the following reference:
 
-**_J. Read, M-Y. Lee, W-H. Huang, Y-C. Luo, A. Lu, S. Yu, ※[NeuroSim V1.5: Improved Software Backbone for Benchmarking Compute-in-Memory Accelerators with Device and Circuit-level Non-idealities](), *§ arXiv, 2025._**
+**_J. Read, M-Y. Lee, W-H. Huang, Y-C. Luo, A. Lu, S. Yu, ※[NeuroSim V1.5: Improved Software Backbone for Benchmarking Compute-in-Memory Accelerators with Device and Circuit-level Non-idealities](https://arxiv.org/abs/2505.02314), *§ arXiv, 2025._**
 
 **_J. Lee, A. Lu, W. Li, S. Yu, ※[NeuroSim V1.4: Extending Technology Support for Digital Compute-in-Memory Toward 1nm Node](https://ieeexplore.ieee.org/document/10443264), *§ IEEE Transactions on Circuits and Systems I: Regular Papers*, 2024._**
 

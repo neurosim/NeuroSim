@@ -184,6 +184,9 @@ If you use the tool or adapt the tool in your work or publication, you are requi
 
 **_X. Peng, S. Huang, Y. Luo, X. Sun and S. Yu, ※[DNN+NeuroSim: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators with Versatile Device Technologies](https://ieeexplore-ieee-org.prx.library.gatech.edu/document/8993491), *§ IEEE International Electron Devices Meeting (IEDM)*, 2019._**
 
+## Update
+:star2: [2025.06.27] Image normalization of Imagenet dataset is updated for Swin Transformer following the PyTorch Libraries. Software top-1 accuracy: 80.1% --> 81.7%
+
 ## Contributors and Support
 
 Developers: [James Read](mailto:jread6@gatech.edu) :two_men_holding_hands: [Ming-Yen Lee](mailto:mlee838@gatech.edu) :two_men_holding_hands: [Junmo Lee](mailto:junmolee@gatech.edu) :couple: [Anni Lu](mailto:alu75@gatech.edu) :two_women_holding_hands: [Xiaochen Peng](mailto:xpeng76@gatech.edu) :two_women_holding_hands: [Shanshi Huang](mailto:shuang406@gatech.edu).

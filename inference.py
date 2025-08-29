@@ -111,11 +111,11 @@ def main():
         data_loader_quant = get_imagenet(args.calib_batch_size, args.data_path, train=True, val=False, sample=True, model=args.model)
         data_loader_test = get_imagenet(args.batch_size, args.data_path, train=False, val=True, sample=True, model=args.model)
     elif args.dataset == 'cifar100':
-        data_loader_quant = get_cifar100(args.calib_batch_size, args.data_path, train=True, val=False, model=args.model)
-        data_loader_test = get_cifar100(args.batch_size, args.data_path, train=False, val=True, model=args.model)
+        data_loader_quant = get_cifar100(args.calib_batch_size, args.data_path, train=True, val=False)
+        data_loader_test = get_cifar100(args.batch_size, args.data_path, train=False, val=True)
     elif args.dataset == 'cifar10':
-        data_loader_quant = get_cifar10(args.calib_batch_size, args.data_path, train=True, val=False, model=args.model)
-        data_loader_test = get_cifar10(args.batch_size, args.data_path, train=False, val=True, model=args.model)
+        data_loader_quant = get_cifar10(args.calib_batch_size, args.data_path, train=True, val=False)
+        data_loader_test = get_cifar10(args.batch_size, args.data_path, train=False, val=True)
 
     if args.num_batches == -1:
         args.num_batches = len(data_loader_test)

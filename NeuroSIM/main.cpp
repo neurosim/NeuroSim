@@ -117,6 +117,10 @@ int main(int argc, char * argv[]) {
     }
     }
 
+    if ((param->technode<=14) && (param->temp !=300))
+    {
+        cout << "WARNING!: TECHNOLOGY NODE UNDER 14NM IS ONLY SUPPORTED AT 300K TEMPERATURE!" << endl;
+    }
     /*** initialize operationMode as default ***/
     param->conventionalParallel = 0;
     param->conventionalSequential = 0;

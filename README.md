@@ -109,6 +109,15 @@ python inference.py --dataset imagenet --model resnet50 --hardware 1 --bitcell 1
     --sub_array "[128,128]" --mem_type "capacitive" --mem_states_file "" \
     --read_noise 0.1
 ```
+**1. 2D Inference: DNN+NeuroSim evaluating DNN inference performance on 2D in-memory computing or near-memory computing architectures.**
++ 2DInferenceDigitalSystolicArrayV1.0: (1) Wrap the DNN, digital systolic array, and NeuroSim to evaluate the PPA of digital systolic arrays supporting the latest technology node in 2DInferenceV1.4.
++ 2DInferenceDCIMV1.0: (1) Support digital CIM hardware evaluations with technology scaling down to 1nm node (2) Implement the latest evaluation framework in 2DInferenceV1.4.
++ 2DInferenceV1.5: (1) New, 6.5X faster software backbone (2) Support for more neural networks (including vision transformer) (3) Automatic post-training quantization with TensoorRT (4) Support for non-volatile capacitor memory
++ 2DInferenceV1.4: (1) Support 130nm~1nm technology node (2) Introduce partial parallel mode (3) Add XY bus as an alternative to H-tree interconnect
++ 2DInferenceV1.3: (1) Validate with real silicon data (2) Introduce synchronous and asynchronous mode (3) Update technology file for FinFET (4) Add level shifter for eNVM
++ 2DInferenceV1.2: (1) Calibrate temperature-related and layout features of FinFET technology (2) Add voltageSA-based multi-level SA and SAR ADC, in addition to the original CurrentSA-based multi-level SA
++ 2DInferenceV1.1: (1) Implement a multi-core architecture in the buffer for high parallelism (2) Introduce low-swing interconnect (3) Calibrate FinFET technology library (4) Add device non-ideal factors (5) Enable pipeline execution
++ 2DInferenceV1.0: (1) Provide an end-to-end benchmarking framework, (2) Support various memory technologies and technology nodes (130nm~7nm), (3) Features hierarchical simulation from chip level to array level
 
 ## Parameter Reference
 
@@ -192,6 +201,10 @@ If you use the tool or adapt the tool in your work or publication, you are requi
 Developers: [James Read](mailto:jread6@gatech.edu) :two_men_holding_hands: [Ming-Yen Lee](mailto:mlee838@gatech.edu) :two_men_holding_hands: [Junmo Lee](mailto:junmolee@gatech.edu) :couple: [Anni Lu](mailto:alu75@gatech.edu) :two_women_holding_hands: [Xiaochen Peng](mailto:xpeng76@gatech.edu) :two_women_holding_hands: [Shanshi Huang](mailto:shuang406@gatech.edu).
 
 This research is supported by NSF CAREER award, NSF/SRC E2CDA program, the ASCENT center (SRC/DARPA JUMP 1.0) and the PRISM and CHIMES centers (SRC/DARPA JUMP 2.0).
+## Recent Update
+:star2: [2025.05.05] New DNN+CIM version with faster software backbone simulation, more neural network support (including vision transformer), and flexible noise modeling. Check branch 2DInferenceV1.5 for more details.
+
+:star2: [2025.01.01] DCIM version with the latest hardware evaluation is available. Check branch 2DInferenceDCIMV1.0 for more details.
 
 If you have logistic questions or comments on the model, please contact :man: [Prof. Shimeng Yu](mailto:shimeng.yu@ece.gatech.edu), and if you have technical questions or comments, please contact :man: [James Read](mailto:jread6@gatech.edu) or :man: [Ming-Yen Lee](mailto:mlee838@gatech.edu) :man: [Junmo Lee](mailto:junmolee@gatech.edu).
 

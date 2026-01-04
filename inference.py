@@ -16,7 +16,7 @@ def parse_args():
     # resnet50 (imagenet) software baseline (quantized): 80.012% (79.972%)
     parser.add_argument('--dataset', default='cifar10', help='cifar10|cifar100|imagenet')
     parser.add_argument('--model', default='vgg8', help='vgg8|DenseNet40|resnet18|resnet50|swin_t')
-    parser.add_argument('--data_path', default='/usr/scratch1/datasets/', help='path to saved datasets')
+    parser.add_argument('--data_path', default='/path/to/datasets/', help='path to saved datasets')
     parser.add_argument('--model_path', default='./models/', help='path to saved models')
     parser.add_argument('--test_name', default='test', help='test name')
 

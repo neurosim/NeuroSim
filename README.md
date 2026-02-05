@@ -7,7 +7,7 @@ The DNN+NeuroSim framework was developed by [Prof. Shimeng Yu's group](https://s
 ## 1. Support for digital CIM hardware evaluations with technology scaling down to 1nm node (C++ code).
 ```
 Please specify the following parameters in the Param.cpp for DCIM evaluation.
-Set the memcelltype=4, operationmode=1, toggle_enforce=1.
+Set the memcelltype=4, operationmode=1, toggle_enforce=1. (to evaluate at different hard-coded toggle rates) memcelltype=4, operationmode=1, toggle_enforce=0. (to evaluate under real workload traces)
 
 operationmode = 1;
 memcelltype = 4;

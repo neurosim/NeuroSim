@@ -17,9 +17,9 @@ find . -name "*.tar" | while read NAME ; do mkdir -p "${NAME%.tar}"; tar -xvf "$
 cd ..
 
 ## 3. Extract the validation data and move images to subfolders:
-mkdir val && mv ILSVRC2012_img_val.tar val/ && cd val && tar -xvf ILSVRC2012_img_val.tar
+mkdir val && cp ILSVRC2012_img_val.tar val/ && cd val && tar -xvf ILSVRC2012_img_val.tar
 wget -qO- https://raw.githubusercontent.com/soumith/imagenetloader.torch/master/valprep.sh | bash
-
+rm -f ILSVRC2012_img_val.tar
 
 ## 4. Delete corrupted image
 # there is one png under JPEG name. some readers fail on this image so need to remove it
